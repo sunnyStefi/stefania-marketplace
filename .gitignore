@@ -1,0 +1,5 @@
+.claude/
+.playwright-mcp/
+.idea/
+openspec/
+hour-registration/rules/context.md

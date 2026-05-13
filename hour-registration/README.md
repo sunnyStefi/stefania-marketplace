@@ -1,25 +1,32 @@
----
-name: README
-description: "Overview of the worksheet command suite for automating the monthly billing cycle."
----
+# hour-registration
 
-# Worksheet
+Automates the complete billing cycle for consultants: reading worked hours from Google Calendar, submitting timesheets to Eneco and Sourcelabs, downloading work slips and NS travel history, and emailing everything to administration.
 
-Automates the complete billing cycle: reading worked hours from Google Calendar, submitting timesheets to Eneco and Sourcelabs, downloading work slips and NS travel history, and emailing everything to administration.
+## Installation
 
-> Run in **Claude Desktop** — commands rely on local MCP servers and shared local files.
+Install from a marketplace:
+
+```
+/plugin install hour-registration@<marketplace>
+```
+
+Or install from a local path:
+
+```
+/plugin install /path/to/hour-registration
+```
 
 ---
 
 ## Weekly — every Friday
 
 ```
-/worksheet:weekly-tasks:0. weekly-orchestrator
+/hour-registration:weekly-tasks:0. weekly-orchestrator
 ```
 
 | Step | Command | What it does |
 |------|---------|--------------|
-| 1 | `list-weekly-hours-calendar` | Reads Work calendar → `~/.claude/data/worked_hours.json` |
+| 1 | `list-weekly-hours-calendar` | Reads Work calendar → `hour-registration/data/worked_hours.json` |
 | 2 | `add-weekly-hours-eneco` | Submits hours to Eneco Fieldglass |
 | 3 | `add-weekly-hours-sourcelabs` | Submits hours to Sourcelabs Administratie |
 
@@ -30,7 +37,7 @@ Automates the complete billing cycle: reading worked hours from Google Calendar,
 ## Monthly — first Monday of the month
 
 ```
-/worksheet:monthly-tasks:0. monthly-orchestrator
+/hour-registration:monthly-tasks:0. monthly-orchestrator
 ```
 
 Steps 4–5 run without pausing; step 6 asks for confirmation before sending.
@@ -53,16 +60,16 @@ The weekly orchestrator runs automatically via a macOS `launchd` job.
 
 | File | Purpose |
 |------|---------|
-| `~/.claude/schedule/run-weekly-worksheet.sh` | Wrapper script |
-| `~/.claude/schedule/com.claude.weekly-worksheet.plist` | launchd job (Friday 10:00) |
+| `schedule/run-weekly-worksheet.sh` | Wrapper script |
+| `schedule/com.claude.weekly-worksheet.plist` | launchd job (Friday 10:00) |
 | `~/.claude/jobs/weekly-worksheet.log` | stdout log |
 | `~/.claude/jobs/weekly-worksheet-error.log` | stderr log |
 
 ### First-time setup
 
 ```bash
-chmod +x ~/.claude/schedule/run-weekly-worksheet.sh
-cp ~/.claude/schedule/com.claude.weekly-worksheet.plist ~/Library/LaunchAgents/
+chmod +x schedule/run-weekly-worksheet.sh
+cp schedule/com.claude.weekly-worksheet.plist ~/Library/LaunchAgents/
 launchctl load ~/Library/LaunchAgents/com.claude.weekly-worksheet.plist
 ```
 
@@ -75,7 +82,7 @@ launchctl unload ~/Library/LaunchAgents/com.claude.weekly-worksheet.plist   # pa
 launchctl load   ~/Library/LaunchAgents/com.claude.weekly-worksheet.plist   # resume
 ```
 
-**Requirements:** Mac must be awake and logged in at 10:00. Keep Claude Desktop running (or set it to launch at login: **System Settings → General → Login Items**).
+**Requirements:** Mac must be awake and logged in at 10:00.
 
 ---
 
@@ -84,7 +91,7 @@ launchctl load   ~/Library/LaunchAgents/com.claude.weekly-worksheet.plist   # re
 All location-to-system mappings live in one file:
 
 ```
-~/.claude/rules/worksheet-locations.md
+rules/worksheet-locations.md
 ```
 
 Edit only this file when adding a new client site — all three weekly steps read from it automatically.
@@ -93,22 +100,20 @@ Edit only this file when adding a new client site — all three weekly steps rea
 
 ## Setup
 
-### 1. Install Claude Desktop
-
-Download from [claude.ai/download](https://claude.ai/download).
-
-### 2. Place the commands
+### 1. Install the plugin
 
 ```
-~/.claude/
-  commands/worksheet/
-    README.md
-    weekly-tasks/   0. weekly-orchestrator.md  1–3. …
-    monthly-tasks/  0. monthly-orchestrator.md  4–6. …
-  schedule/
-    run-weekly-worksheet.sh
-    com.claude.weekly-worksheet.plist
+/plugin install /path/to/hour-registration
 ```
+
+### 2. Copy schedule files
+
+```bash
+cp schedule/run-weekly-worksheet.sh ~/.claude/schedule/
+cp schedule/com.claude.weekly-worksheet.plist ~/.claude/schedule/
+```
+
+Update the paths inside both files to match your system.
 
 ### 3. Add credentials to Keychain
 
@@ -130,9 +135,8 @@ Edit `~/.claude/claude_desktop_config.json`:
 ```json
 {
   "mcpServers": {
-    "playwright":       { "command": "npx", "args": ["@playwright/mcp@latest"] },
-    "google-calendar":  { "command": "npx", "args": ["@modelcontextprotocol/server-google-calendar"] },
-    "microsoft-365":    { "command": "npx", "args": ["@modelcontextprotocol/server-microsoft365"] }
+    "playwright":      { "command": "npx", "args": ["@playwright/mcp@latest"] },
+    "google-calendar": { "command": "npx", "args": ["@modelcontextprotocol/server-google-calendar"] }
   }
 }
 ```
@@ -141,4 +145,4 @@ Restart Claude Desktop after saving.
 
 ### 5. Verify
 
-Type `/worksheet` in Claude Desktop — you should see all 6 commands listed.
+Type `/hour-registration` in Claude Code — you should see all 6 commands listed under `monthly-tasks` and `weekly-tasks`.

@@ -1,0 +1,52 @@
+---
+paths:
+  - "commands/**/*.md"
+---
+
+# Worksheet context
+
+Copy this file to `rules/context.md` (gitignored) and fill in your values.
+
+## Identity
+
+| Field | Value |
+|---|---|
+| Name | Your Full Name |
+| Email | your@email.com |
+
+## Companies
+
+| Role | Company |
+|---|---|
+| Employer | Your employer |
+| Client | Your client |
+
+## Contacts
+
+| Name | Role | Email |
+|---|---|---|
+| Admin contact name | Administration | admin@company.com |
+
+## Locations
+
+| Name | Type | Notes |
+|---|---|---|
+| City A | Client office | on-site days |
+| City B | Client office | on-site days |
+| City C | Meetup location | matches `City C-Meetup` calendar event |
+
+## Your Company project codes
+
+| Project | Code |
+|---|---|
+| Default (client on-site / remote) | Client-YourName |
+| Meetup | Meetup |
+| Leave / Sick | Verlof / Leave |
+| Vacation | Vakantie / Vacation |
+| National Holiday | Feestdag / National Holiday |
+
+## NS card
+
+| Field | Value |
+|---|---|
+| Card ID | xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx |
