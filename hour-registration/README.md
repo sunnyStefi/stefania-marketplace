@@ -12,7 +12,7 @@
 
 ---
 
-## Installation
+## 📥 Installation
 
 **From a marketplace**
 
@@ -39,7 +39,7 @@
 | 1 | `list-weekly-hours-calendar` | Reads Work calendar → `hour-registration/data/worked_hours.json` |
 | 2 | `add-weekly-hours` | Submits hours to Eneco Fieldglass and Sourcelabs Administratie |
 
-> **Automated:** runs every Friday at **10:00** via macOS `launchd` (see [Scheduling](#scheduling)).
+> **Automated:** runs every Friday at **10:00** via macOS `launchd` (see [Scheduling](#-scheduling)).
 
 ---
 
@@ -58,11 +58,11 @@ Step 1 runs without pausing; step 2 asks for confirmation before sending and cle
 
 > Download paths use `MM-YY` format (e.g. April 2026 → `04-26`). Orchestrators always target the **previous** month (Europe/Amsterdam timezone).
 
-> **Automated:** runs on the first Monday of each month at **08:00** via macOS `launchd` (see [Scheduling](#scheduling)).
+> **Automated:** runs on the first Monday of each month at **08:00** via macOS `launchd` (see [Scheduling](#-scheduling)).
 
 ---
 
-## Scheduling
+## ⏰ Scheduling
 
 Both orchestrators run automatically via macOS `launchd` jobs.
 
@@ -107,13 +107,13 @@ launchctl unload ~/Library/LaunchAgents/com.claude.monthly-worksheet.plist   # p
 
 ---
 
-## Location rules
+## 📍 Location rules
 
 All location-to-system mappings live in `rules/context.md`, alongside the rest of the personal configuration. Edit only that file when adding a new client site or changing a project code — it is the **single source of truth**.
 
 ---
 
-## Setup
+## 🧰 Setup
 
 ### 1. Install the plugin
 

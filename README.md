@@ -12,7 +12,7 @@
 
 ---
 
-## Plugins
+## 📦 Plugins
 
 <table>
   <thead>
@@ -33,7 +33,7 @@
 
 ---
 
-## Installation
+## 🚀 Installation
 
 ### From this marketplace *(once hosted)*
 
