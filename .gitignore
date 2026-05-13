@@ -1,6 +1,7 @@
 .claude/
 .playwright-mcp/
 .idea/
+.DS_Store
 openspec/
 hour-registration/rules/context.md
-.DS_Store
+CLAUDE.md
