@@ -1,0 +1,325 @@
+- generic [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "Direct naar hoofdinhoud" [ref=e4] [cursor=pointer]:
+        - /url: "#mainContent"
+      - heading "Hoofdnavigatie" [level=2] [ref=e5]
+      - link "Ga naar de homepage van ns.nl" [ref=e6] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e7]: Ga naar de homepage van ns.nl
+      - generic [ref=e11]:
+        - navigation [ref=e12]:
+          - list [ref=e13]:
+            - listitem [ref=e14]:
+              - button "Reisinformatie Open submenu" [ref=e15] [cursor=pointer]:
+                - text: Reisinformatie
+                - generic [ref=e16]: Open submenu
+            - listitem [ref=e17]:
+              - button "Producten Open submenu" [ref=e18] [cursor=pointer]:
+                - text: Producten
+                - generic [ref=e19]: Open submenu
+            - listitem [ref=e20]:
+              - button "Dagje uit Open submenu" [ref=e21] [cursor=pointer]:
+                - text: Dagje uit
+                - generic [ref=e22]: Open submenu
+            - listitem [ref=e23]:
+              - button "Service en contact Open submenu" [ref=e24] [cursor=pointer]:
+                - text: Service en contact
+                - generic [ref=e25]: Open submenu
+        - navigation [ref=e26]:
+          - list [ref=e27]:
+            - listitem [ref=e96]:
+              - 'button "Mijn NS Ingelogd met: concinimus@gmail.com" [ref=e97] [cursor=pointer]':
+                - generic [ref=e98]: Mijn NS
+                - generic [ref=e99]: "Ingelogd met:"
+                - generic [ref=e100]:
+                  - generic [ref=e101]: c.
+                  - generic [ref=e102]: concinimus@gmail.com
+            - listitem [ref=e32]:
+              - button "Zoeken" [ref=e33] [cursor=pointer]:
+                - generic [ref=e35]: Zoeken
+        - navigation [ref=e36]:
+          - list [ref=e37]:
+            - listitem [ref=e38]:
+              - link "Zakelijk" [ref=e39] [cursor=pointer]:
+                - /url: /zakelijk
+            - listitem [ref=e40]:
+              - button "NS International Open submenu" [ref=e41] [cursor=pointer]:
+                - text: NS International
+                - generic [ref=e42]: Open submenu
+            - listitem [ref=e43]:
+              - link "In English" [ref=e44] [cursor=pointer]:
+                - /url: https://www.ns.nl/en/mijnns#/
+  - main [ref=e45]:
+    - generic [ref=e49]:
+      - generic [ref=e103]:
+        - generic [ref=e105]:
+          - generic:
+            - menubar "Mijn NS" [ref=e106]:
+              - menuitem "Startpagina" [ref=e107] [cursor=pointer]
+              - menuitem "Mijn reizen" [ref=e108]:
+                - text: Mijn reizen
+                - img [ref=e109]:
+                  - img [ref=e111]
+              - menuitem "Betaaloverzicht" [ref=e113] [cursor=pointer]
+              - menuitem "Gegevens en voorkeuren" [ref=e114] [cursor=pointer]
+              - menuitem "Uitloggen" [ref=e115]
+            - navigation [ref=e116]
+        - generic:
+          - generic: Uitloggen
+      - generic [ref=e119]:
+        - generic:
+          - generic [ref=e121]:
+            - generic:
+              - generic [ref=e123]:
+                - heading "Reishistorie & betalingen" [level=1] [ref=e125]:
+                  - generic: Reishistorie & betalingen
+                - heading "Bekijk hier je gemaakte reizen en betalingen. Bekijk de hulp op deze pagina voor alle mogelijkheden." [level=2] [ref=e127]:
+                  - generic: Bekijk hier je gemaakte reizen en betalingen. Bekijk de hulp op deze pagina voor alle mogelijkheden.
+              - generic [ref=e129]:
+                - generic [ref=e131]:
+                  - generic [ref=e132]:
+                    - generic [ref=e133]: Periode
+                    - combobox "Periode" [ref=e134]:
+                      - option "Laatste 7 dagen"
+                      - option "Deze maand"
+                      - option "Vorige maand" [selected]
+                      - option "Afgelopen jaar"
+                      - option "Afgelopen 1,5 jaar"
+                      - option "Kies handmatig"
+                  - generic [ref=e135]:
+                    - generic [ref=e136]: Kaart
+                    - combobox "Kaart" [ref=e137]:
+                      - option "OV pas"
+                      - option "Stefania Anonimous"
+                      - option "Personal Stefania"
+                      - option "Personal Stefania S" [selected]
+                  - generic [ref=e138]:
+                    - button "van 1 apr 2026" [ref=e140] [cursor=pointer]:
+                      - generic [ref=e142]:
+                        - strong [ref=e143]: van
+                        - text: 1 apr 2026
+                    - button "tot 30 apr 2026" [ref=e145] [cursor=pointer]:
+                      - generic [ref=e147]:
+                        - strong [ref=e148]: tot
+                        - text: 30 apr 2026
+                  - button "Tonen" [ref=e151] [cursor=pointer]:
+                    - generic [ref=e152]:
+                      - generic: Tonen
+                - generic [ref=e154]:
+                  - generic [ref=e155]:
+                    - generic [ref=e156]:
+                      - strong [ref=e157]: "5"
+                      - text: Transacties
+                    - generic [ref=e159]:
+                      - checkbox "Declareren" [ref=e160]
+                      - generic [ref=e161] [cursor=pointer]: Declareren
+                  - generic [ref=e165]:
+                    - img [ref=e167]:
+                      - img [ref=e169]
+                    - generic [ref=e171]:
+                      - heading "Niet alle reizen en betalingen zijn direct zichtbaar." [level=2] [ref=e174]:
+                        - generic: Niet alle reizen en betalingen zijn direct zichtbaar.
+                      - link "Lees meer (opent in nieuw tabblad)" [ref=e177] [cursor=pointer]:
+                        - /url: "#"
+                        - generic [ref=e179]:
+                          - generic: Lees meer
+                        - generic [ref=e180]: (opent in nieuw tabblad)
+                  - generic [ref=e182]:
+                    - generic [ref=e183]:
+                      - heading "donderdag 23 april 2026" [level=3] [ref=e185]:
+                        - generic:
+                          - strong [ref=e186]: donderdag
+                          - text: 23 april 2026
+                      - generic [ref=e190]:
+                        - generic [ref=e192]:
+                          - generic [ref=e194]:
+                            - time [ref=e195]: 15:54
+                            - generic [ref=e202]: Rotterdam Alexander
+                          - generic [ref=e204]:
+                            - time [ref=e205]: 16:35
+                            - generic [ref=e211]: Den Haag Centraal
+                        - generic [ref=e213]: NS
+                        - generic [ref=e216]: € 8,70
+                        - generic [ref=e219]:
+                          - checkbox "Declareren" [ref=e220]
+                          - generic: Declareren
+                      - generic [ref=e225]:
+                        - generic [ref=e229]:
+                          - generic [ref=e230]: Automatisch saldo opladen
+                          - generic [ref=e231]: 07:51 Den Haag Centraal
+                        - strong [ref=e233]: + € 50,00
+                        - generic [ref=e236]:
+                          - checkbox "Declareren" [ref=e237]
+                          - generic: Declareren
+                      - generic [ref=e241]:
+                        - generic [ref=e243]:
+                          - generic [ref=e245]:
+                            - time [ref=e246]: 07:51
+                            - generic [ref=e253]: Den Haag Centraal
+                          - generic [ref=e255]:
+                            - time [ref=e256]: 08:34
+                            - generic [ref=e262]: Rotterdam Alexander
+                        - generic [ref=e264]: NS
+                        - generic [ref=e267]: € 8,70
+                        - generic [ref=e270]:
+                          - checkbox "Declareren" [ref=e271]
+                          - generic: Declareren
+                    - generic [ref=e274]:
+                      - heading "woensdag 22 april 2026" [level=3] [ref=e276]:
+                        - generic:
+                          - strong [ref=e277]: woensdag
+                          - text: 22 april 2026
+                      - generic [ref=e281]:
+                        - generic [ref=e283]:
+                          - generic [ref=e285]:
+                            - time [ref=e286]: 17:35
+                            - generic [ref=e293]: Amsterdam RAI
+                          - generic [ref=e295]:
+                            - time [ref=e296]: 18:45
+                            - generic [ref=e302]: Den Haag Laan van NOI
+                        - generic [ref=e304]: NS
+                        - generic [ref=e307]: € 13,60
+                        - generic [ref=e310]:
+                          - checkbox "Declareren" [ref=e311]
+                          - generic: Declareren
+                      - generic [ref=e317]:
+                        - generic [ref=e319]:
+                          - generic [ref=e321]:
+                            - time [ref=e322]: 07:52
+                            - generic [ref=e329]: Den Haag Centraal
+                          - generic [ref=e331]:
+                            - time [ref=e332]: 08:45
+                            - generic [ref=e338]: Amsterdam Zuid
+                        - generic [ref=e340]: NS
+                        - generic [ref=e343]: € 13,60
+                        - generic [ref=e346]:
+                          - checkbox "Declareren" [ref=e347]
+                          - generic: Declareren
+              - complementary [ref=e351]:
+                - generic [ref=e358]:
+                  - heading "Hulp nodig?" [level=4] [ref=e360]:
+                    - generic: Hulp nodig?
+                  - generic [ref=e362]:
+                    - group [ref=e366]:
+                      - generic "Geld terug bij vertraging" [ref=e367] [cursor=pointer]:
+                        - heading "Geld terug bij vertraging" [level=5] [ref=e371]:
+                          - generic: Geld terug bij vertraging
+                        - img [ref=e373]:
+                          - img [ref=e375]
+                      - generic: "Voor eenvoudig geld terug vragen bij vertraging: klik op de reis met vertraging in . In de reisdetails vind je een link naar een alvast ingevuld formulier. Heb je een Los ticket of E-ticket gekocht? Gebruik dan het ."
+                    - group [ref=e380]:
+                      - generic "Geld terug bij vergeten uitchecken" [ref=e381] [cursor=pointer]:
+                        - heading "Geld terug bij vergeten uitchecken" [level=5] [ref=e385]:
+                          - generic: Geld terug bij vergeten uitchecken
+                        - img [ref=e387]:
+                          - img [ref=e389]
+                      - generic: Wanneer je een in- of uitcheck hebt gemist verschijnt dit in je reisoverzicht direct onder deze reis. We proberen eerst je reis aan te vullen op grond van je reisgeschiedenis. Als dit niet lukt tonen we je een link naar het formulier waarmee je geld terug kunt vragen.
+                    - group [ref=e394]:
+                      - generic "Teruggaven" [ref=e395] [cursor=pointer]:
+                        - heading "Teruggaven" [level=5] [ref=e399]:
+                          - generic: Teruggaven
+                        - img [ref=e401]:
+                          - img [ref=e403]
+                      - generic: Bekijk het overzicht en de status van door jou aangevraagde teruggaven bij .
+                    - group [ref=e407]:
+                      - generic "Declaratieoverzicht" [ref=e408] [cursor=pointer]:
+                        - heading "Declaratieoverzicht" [level=5] [ref=e412]:
+                          - generic: Declaratieoverzicht
+                        - img [ref=e414]:
+                          - img [ref=e416]
+                      - generic: Je kunt je reizen selecteren en exporteren. Handig wanneer je jouw reizen bij je werkgever wilt aangeven.
+                    - group [ref=e420]:
+                      - generic "Mijn laatste reis ontbreekt" [ref=e421] [cursor=pointer]:
+                        - heading "Mijn laatste reis ontbreekt" [level=5] [ref=e425]:
+                          - generic: Mijn laatste reis ontbreekt
+                        - img [ref=e427]:
+                          - img [ref=e429]
+                      - generic: Staat je reis niet in dit overzicht? Het kan 24 uur duren voordat wij je reis hebben verwerkt.
+                  - paragraph [ref=e433]:
+                    - generic:
+                      - text: Staat je vraag er niet tussen? Bekijk
+                      - link "meer vragen en antwoorden" [ref=e435] [cursor=pointer]:
+                        - /url: https://www.ns.nl/klantenservice
+                        - generic [ref=e437]:
+                          - generic: meer vragen en antwoorden
+                      - text: .
+          - generic [ref=e439]:
+            - heading "Download overzicht" [level=3] [ref=e441]:
+              - generic: Download overzicht
+            - generic [ref=e442]:
+              - list [ref=e444]:
+                - listitem [ref=e445]:
+                  - generic [ref=e446]:
+                    - radio "Alle 5 transacties" [checked] [ref=e447]
+                    - generic [ref=e448] [cursor=pointer]: Alle 5 transacties
+                - listitem [ref=e449]:
+                  - generic [ref=e450]:
+                    - radio "0 declaraties" [ref=e451]
+                    - generic [ref=e452] [cursor=pointer]: 0 declaraties
+              - combobox "Selecteer download formaat" [ref=e453]:
+                - option "PDF" [selected]
+                - option "CSV"
+              - button "Download" [ref=e455] [cursor=pointer]:
+                - generic [ref=e456]:
+                  - generic: Download
+              - button "Naar boven" [ref=e458] [cursor=pointer]
+  - contentinfo [ref=e57]:
+    - generic [ref=e61]:
+      - list [ref=e62]:
+        - listitem [ref=e63]:
+          - link "Disclaimer" [ref=e64] [cursor=pointer]:
+            - /url: /disclaimer
+        - listitem [ref=e65]:
+          - link "Privacy" [ref=e66] [cursor=pointer]:
+            - /url: /privacy-statement
+        - listitem [ref=e67]:
+          - link "Cookies" [ref=e68] [cursor=pointer]:
+            - /url: /privacy-statement/cookiestatement
+        - listitem [ref=e69]:
+          - link "Bedrijfsinformatie" [ref=e70] [cursor=pointer]:
+            - /url: /bedrijfsinformatie
+        - listitem [ref=e71]:
+          - link "Voorwaarden en folders" [ref=e72] [cursor=pointer]:
+            - /url: /voorwaarden
+      - link "Logo Nederlandse Spoorwegen" [ref=e74] [cursor=pointer]:
+        - /url: /
+        - img "Logo Nederlandse Spoorwegen" [ref=e75]
+  - dialog "Jouw cookie-instellingen" [ref=e78]:
+    - generic [ref=e79]:
+      - generic [ref=e80]:
+        - generic:
+          - heading "Jouw cookie-instellingen" [level=2] [ref=e81]
+          - generic [ref=e82]:
+            - text: De online kanalen (web, app en e-mail) van NS Groep N.V. maken gebruik van cookies en vergelijkbare technieken om jouw gebruikers- en klantervaring te optimaliseren. Zonder de functionele cookies werkt onze website niet goed. Met beperkt analytische cookies verzamelen en analyseren we informatie over hoe je onze website gebruikt. Deze soorten cookies staan standaard aan. De andere personalisatie- en advertentiecookies kun je zelf aan- en uitzetten.
+            - text: Wij vragen jou om toestemming voor het gebruik van personalisatie- en advertentiecookies. Door op ‘Akkoord’ te klikken stem je in met het gebruik van personalisatie- en advertentiecookies binnen en buiten de online kanalen van NS. Door op 'Weigeren' te klikken blijven de personalisatie- en advertentiecookies uitstaan, en functionele en beperkt analytische cookies aan. Wil je je cookies zelf instellen? Kies dan voor ‘Cookie-instellingen aanpassen’. Je kan je keuze altijd wijzigen of je toestemming intrekken door de knop “Cookie-instellingen aanpassen” bovenaan ons
+            - link "Cookiestatement" [ref=e83] [cursor=pointer]:
+              - /url: https://www.ns.nl/privacy-statement/cookiestatement
+            - text: of onderaan iedere pagina door op “Cookies” te klikken.
+            - text: "Met personalisatie en advertentiecookies aan zorgen wij dat:"
+            - strong [ref=e84]: Je relevante informatie en persoonlijke aanbevelingen krijgt binnen onze online kanalen.
+            - text: Wij verzamelen informatie over hoe je onze e-mails, app en website bezoekt, zoals klikgedrag en bezochte pagina’s, en combineren dit (indien mogelijk) met jouw klantdata in onze klantsystemen zodat we jou nóg persoonlijkere informatie en aanbevelingen kunnen tonen. Meer informatie over hoe we je persoonsgegevens verwerken lees je in ons
+            - link "Privacystatement" [ref=e85] [cursor=pointer]:
+              - /url: https://www.ns.nl/privacy-statement
+            - text: .
+            - strong [ref=e86]: We je relevante advertenties tonen buiten onze online kanalen op bijvoorbeeld Meta of Google.
+            - text: Daarnaast gebruiken wij en onze
+            - link "12 partners" [ref=e87] [cursor=pointer]:
+              - /url: https://www.ns.nl/privacy-statement/cookiestatement
+            - text: advertentiecookies om je persoonlijke aanbevelingen en advertenties te tonen (binnen en) buiten onze website. Soms delen we hiervoor persoonsgegevens verkregen uit cookies met onze
+            - link "partners (12)" [ref=e88] [cursor=pointer]:
+              - /url: https://www.ns.nl/privacy-statement/cookiestatement
+            - text: . Meer informatie over hoe we je persoonsgegevens verwerken lees je in ons
+            - link "Privacystatement" [ref=e89] [cursor=pointer]:
+              - /url: https://www.ns.nl/privacy-statement
+            - text: .
+      - generic [ref=e91]:
+        - button "Cookie-instellingen aanpassen, Opent het dialoogvenster van het voorkeurencentrum" [ref=e92] [cursor=pointer]: Cookie-instellingen aanpassen
+        - generic [ref=e93]:
+          - button "Weigeren" [ref=e94] [cursor=pointer]
+          - button "Akkoord" [ref=e95] [cursor=pointer]
+  - button "Feedback" [ref=e460] [cursor=pointer]:
+    - generic [ref=e462]: Feedback
+  - dialog [ref=e463]:
+    - button [ref=e465] [cursor=pointer]:
+      - img [ref=e466]

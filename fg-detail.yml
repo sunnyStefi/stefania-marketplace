@@ -1,0 +1,196 @@
+- generic [active] [ref=e1]:
+  - generic:
+    - alert
+    - alert
+  - link "Overslaan en naar hoofdinhoud" [ref=e3] [cursor=pointer]:
+    - /url: https://enc0.eu.fieldglass.cloud.sap/time_sheet_detail.do?id=z260406004437112001170a3&buyerCode=ENC0&sjkName=ENC0&dataBaseType=sql&startFlow=true#primary-content
+  - banner "Shellbalk" [ref=e6]:
+    - generic [ref=e185]:
+      - generic "Navigatiemenu uitvouwen" [ref=e186] [cursor=pointer]:
+        - button [ref=e187]:
+          - img [ref=e189]
+      - generic "Terug naar startpagina" [ref=e191]:
+        - link "Terug naar startpagina" [ref=e192] [cursor=pointer]:
+          - /url: https://www.eu.fieldglass.cloud.sap/worker_desktop.do?ensureTab=true
+          - generic [ref=e193]:
+            - generic:
+              - img "Terug naar startpagina"
+    - toolbar [ref=e197]:
+      - button "Functieswitch" [ref=e199] [cursor=pointer]:
+        - img [ref=e201]
+      - button "Help" [ref=e204] [cursor=pointer]:
+        - img [ref=e206]
+    - button "Avatar SP" [ref=e209] [cursor=pointer]:
+      - generic [ref=e211]:
+        - generic:
+          - generic:
+            - generic:
+              - img "Avatar SP":
+                - generic: SP
+  - generic [ref=e11]:
+    - navigation [ref=e13]:
+      - menubar "Primair navigatiemenu" [ref=e14]:
+        - generic:
+          - generic "Startpagina" [ref=e212]:
+            - menuitemradio [ref=e213] [cursor=pointer]:
+              - img [ref=e215]
+          - generic "Mijn items" [ref=e217]:
+            - menuitem [ref=e218] [cursor=pointer]:
+              - img [ref=e220]
+              - img [ref=e223]
+          - generic "Tijd en onkosten" [ref=e225]:
+            - menuitem [ref=e226] [cursor=pointer]:
+              - img [ref=e228]
+              - img [ref=e231]
+          - generic "Activiteitsitems" [ref=e233]:
+            - menuitem [ref=e234] [cursor=pointer]:
+              - img [ref=e236]
+              - img [ref=e239]
+      - separator [ref=e241]
+      - menubar "Navigatiemenu voetgebied" [ref=e242]:
+        - generic "Snel maken" [ref=e243]:
+          - menuitem [ref=e244] [cursor=pointer]:
+            - img [ref=e246]
+    - generic [ref=e16]:
+      - main [ref=e17]:
+        - generic [ref=e19]:
+          - generic [ref=e21]:
+            - generic [ref=e22]:
+              - list [ref=e23]:
+                - listitem [ref=e24]:
+                  - link "Lijst met werkbriefjes" [ref=e25] [cursor=pointer]:
+                    - /url: https://www.eu.fieldglass.cloud.sap/time_sheet_list.do
+                    - figure [ref=e26]:
+                      - img
+                    - generic [ref=e27]: Lijst met werkbriefjes
+              - generic [ref=e28]:
+                - heading "Pozzi, Stefania" [level=1] [ref=e31]:
+                  - generic [ref=e32]: Pozzi, Stefania
+                - generic [ref=e34]:
+                  - button "Intrekken" [ref=e35] [cursor=pointer]
+                  - generic [ref=e36] [cursor=pointer]:
+                    - text: Acties
+                    - figure [ref=e37]: 
+                - generic [ref=e40]: Werkbriefje
+              - list [ref=e42]:
+                - listitem [ref=e43]:
+                  - generic [ref=e44]: Status
+                  - generic [ref=e45]: In afwachting van goedkeuring
+                - listitem [ref=e46]:
+                  - generic [ref=e47]: Werkbriefje-id
+                  - generic [ref=e48]: ENC0TS00213666
+                - listitem [ref=e49]:
+                  - generic [ref=e50]: Periode
+                  - generic [ref=e51]: 06/04/2026 tot en met 12/04/2026
+                - listitem [ref=e52]:
+                  - generic [ref=e53]: Koper
+                  - generic [ref=e54]: Eneco B.V.
+                - listitem [ref=e55]:
+                  - generic [ref=e56]: Leverancier
+                  - generic [ref=e57]: IT Staffing Nederland B.V.(I0IX)
+            - list [ref=e62]:
+              - listitem [ref=e63] [cursor=pointer]:
+                - link "Gegevens" [ref=e67]:
+                  - /url: javascript:undefined;
+                  - text: Gegevens
+                  - figure [ref=e68]:
+                    - img
+          - generic [ref=e70]:
+            - list [ref=e72]:
+              - listitem [ref=e73]:
+                - generic [ref=e74]: ID van arbeidskracht
+                - generic [ref=e75]: ENC0WK00004034
+            - generic [ref=e76]:
+              - generic:
+                - heading [level=2]
+                - group
+              - generic [ref=e81]:
+                - heading "Tijd gewerkt" [level=4] [ref=e83]
+                - table [ref=e85]:
+                  - rowgroup [ref=e96]:
+                    - row "Dag 6/4 Ma 7/4 Di 8/4 Wo 9/4 Do 10/4 Vr 11/4 Za 12/4 Zo Totaal gewerkt" [ref=e97]:
+                      - columnheader "Dag" [ref=e98]
+                      - columnheader "6/4 Ma" [ref=e99]:
+                        - text: 6/4
+                        - text: Ma
+                      - columnheader "7/4 Di" [ref=e100]:
+                        - text: 7/4
+                        - text: Di
+                      - columnheader "8/4 Wo" [ref=e101]:
+                        - text: 8/4
+                        - text: Wo
+                      - columnheader "9/4 Do" [ref=e102]:
+                        - text: 9/4
+                        - text: Do
+                      - columnheader "10/4 Vr" [ref=e103]:
+                        - text: 10/4
+                        - text: Vr
+                      - columnheader "11/4 Za" [ref=e104]:
+                        - text: 11/4
+                        - text: Za
+                      - columnheader "12/4 Zo" [ref=e105]:
+                        - text: 12/4
+                        - text: Zo
+                      - columnheader "Totaal gewerkt" [ref=e106]
+                    - row "Factureerbaar" [ref=e107]:
+                      - columnheader "Factureerbaar" [ref=e108]
+                    - row "Tech SE B2CNL Prop/Energy Management Toon (C70420/60013986) - B2C Energy Management(W-ITP-100014-10/1257) - 500700 - Ingeleende capaciteit/Temporary Staff" [ref=e109]:
+                      - columnheader "Tech SE B2CNL Prop/Energy Management Toon (C70420/60013986) - B2C Energy Management(W-ITP-100014-10/1257) - 500700 - Ingeleende capaciteit/Temporary Staff" [ref=e110]
+                    - row "Regulier tarief / Standard Time /Uur 0.00 8.00 8.00 8.00 8.00 - - 32.00" [ref=e111]:
+                      - rowheader "Regulier tarief / Standard Time /Uur" [ref=e112]
+                      - cell "0.00" [ref=e113]
+                      - cell "8.00" [ref=e114]
+                      - cell "8.00" [ref=e115]
+                      - cell "8.00" [ref=e116]
+                      - cell "8.00" [ref=e117]
+                      - cell "-" [ref=e118]
+                      - cell "-" [ref=e119]
+                      - cell "32.00" [ref=e120]
+                    - row "Totaal gewerkt 0.00 8.00 8.00 8.00 8.00 0.00 0.00 32.00" [ref=e121]:
+                      - rowheader "Totaal gewerkt" [ref=e122]
+                      - cell "0.00" [ref=e123]
+                      - cell "8.00" [ref=e124]
+                      - cell "8.00" [ref=e125]
+                      - cell "8.00" [ref=e126]
+                      - cell "8.00" [ref=e127]
+                      - cell "0.00" [ref=e128]
+                      - cell "0.00" [ref=e129]
+                      - cell "32.00" [ref=e130]
+              - generic [ref=e132]:
+                - heading "Plaatsingsinformatie" [level=4] [ref=e134]
+                - table "Plaatsingsinformatie" [ref=e136]:
+                  - rowgroup [ref=e140]:
+                    - row "Indieningsdatum 11/05/2026 09:48" [ref=e141]:
+                      - rowheader "Indieningsdatum" [ref=e142]
+                      - cell "11/05/2026 09:48" [ref=e143]
+                    - row "Type Tijdelijk Klassiek" [ref=e144]:
+                      - rowheader "Type Tijdelijk" [ref=e145]
+                      - cell "Klassiek" [ref=e146]
+                    - row
+                    - row "Eigenaar werkopdracht/herziening werkopdracht Egemen Tezcan" [ref=e147]:
+                      - rowheader "Eigenaar werkopdracht/herziening werkopdracht" [ref=e148]
+                      - cell "Egemen Tezcan" [ref=e149]
+                    - row "Vestiging Netherlands (NL)" [ref=e150]:
+                      - rowheader "Vestiging" [ref=e151]
+                      - cell "Netherlands (NL)" [ref=e152]
+                    - row "Afdeling Eneco B.V. (1257/1257)" [ref=e153]:
+                      - rowheader "Afdeling" [ref=e154]
+                      - cell "Eneco B.V. (1257/1257)" [ref=e155]
+              - generic [ref=e156]:
+                - heading "Taakvelden" [level=4] [ref=e158]
+                - generic [ref=e159]: Factureerbaar Tech SE B2CNL Prop/Energy Management Toon (C70420/60013986) - B2C Energy Management(W-ITP-100014-10/1257) - 500700 - Ingeleende capaciteit/Temporary Staff Location FGIC
+              - generic [ref=e164]:
+                - heading "Opmerkingen" [level=4] [ref=e166]
+                - table "Opmerkingen" [ref=e168]:
+                  - rowgroup [ref=e173]:
+                    - row "Ingevoerd Naam Opmerking" [ref=e174]:
+                      - columnheader "Ingevoerd" [ref=e175]
+                      - columnheader "Naam" [ref=e176]
+                      - columnheader "Opmerking" [ref=e177]
+                    - 'row "11/05/2026 09:48 Pozzi, Stefania Reden: Werkbriefje ingetrokken door arbeidskracht." [ref=e178]':
+                      - cell "11/05/2026 09:48" [ref=e179]
+                      - cell "Pozzi, Stefania" [ref=e180]
+                      - 'cell "Reden: Werkbriefje ingetrokken door arbeidskracht." [ref=e181]'
+      - contentinfo:
+        - button "Terug naar boven" [ref=e182] [cursor=pointer]:
+          - generic [ref=e184]: 
