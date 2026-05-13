@@ -101,13 +101,7 @@ launchctl unload ~/Library/LaunchAgents/com.claude.monthly-worksheet.plist   # p
 
 ## Location rules
 
-All location-to-system mappings live in one file:
-
-```
-rules/locations.md
-```
-
-Edit only this file when adding a new client site — all three weekly steps read from it automatically. Project codes (e.g. `Eneco-Stefania`) must match the values in `rules/context.md`; update both files together if a project code changes.
+All location-to-system mappings live in `rules/context.md`, alongside the rest of the personal configuration. Edit only that file when adding a new client site or changing a project code — it is the single source of truth.
 
 ---
 
@@ -138,7 +132,7 @@ The first time a Keychain entry is read, macOS will prompt — choose **Always A
 cp rules/context.md.example rules/context.md
 ```
 
-Fill in your name, email, company contacts, NS card ID, and project codes.
+Fill in your name, email, company contacts, NS card ID, project codes, and location rules table.
 
 ### 4. Set up scheduling
 
