@@ -27,8 +27,7 @@ Or install from a local path:
 | Step | Command | What it does |
 |------|---------|--------------|
 | 1 | `list-weekly-hours-calendar` | Reads Work calendar → `hour-registration/data/worked_hours.json` |
-| 2 | `add-weekly-hours-eneco` | Submits hours to Eneco Fieldglass |
-| 3 | `add-weekly-hours-sourcelabs` | Submits hours to Sourcelabs Administratie |
+| 2 | `add-weekly-hours` | Submits hours to Eneco Fieldglass and Sourcelabs Administratie |
 
 **Automated:** runs every Friday at 10:00 via macOS `launchd` (see [Scheduling](#scheduling)).
 
@@ -147,9 +146,8 @@ Edit `~/.claude/claude_desktop_config.json`:
 ```json
 {
   "mcpServers": {
-    "playwright":        { "command": "npx", "args": ["@playwright/mcp@latest"] },
-    "google-calendar":   { "command": "npx", "args": ["@modelcontextprotocol/server-google-calendar"] },
-    "microsoft-365":     { "command": "npx", "args": ["@modelcontextprotocol/server-microsoft-365"] }
+    "playwright":      { "command": "npx", "args": ["@playwright/mcp@latest"] },
+    "google-calendar": { "command": "npx", "args": ["@modelcontextprotocol/server-google-calendar"] }
   }
 }
 ```
@@ -158,4 +156,4 @@ Restart Claude Desktop after saving.
 
 ### 6. Verify
 
-Type `/hour-registration` in Claude Code — you should see all 6 commands listed under `monthly-tasks` and `weekly-tasks`.
+Type `/hour-registration` in Claude Code — you should see all 7 commands listed under `monthly-tasks` and `weekly-tasks`.
