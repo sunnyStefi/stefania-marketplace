@@ -1,6 +1,6 @@
 <div align="center">
 
-# Stefania's Claude Code Marketplace
+# 🛒 Stefania's Claude Code Marketplace
 
 **A curated collection of [Claude Code](https://claude.ai/code) plugins that automate the unglamorous parts of consulting — so the hours you bill stay focused on actual work.**
 
@@ -24,9 +24,9 @@
   </thead>
   <tbody>
     <tr>
-      <td><a href="./hour-registration/README.md"><b>hour-registration</b></a></td>
+      <td>⏱️ <a href="./hour-registration/README.md"><b>hour-registration</b></a></td>
       <td>Automates the complete billing cycle for consultant invoicing — calendar → timesheets → work slips → email.</td>
-      <td align="center">Live</td>
+      <td align="center">🟢 Live</td>
     </tr>
   </tbody>
 </table>

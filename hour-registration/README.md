@@ -1,6 +1,6 @@
 <div align="center">
 
-# hour-registration
+# ⏱️ hour-registration
 
 **A Claude Code plugin that runs your entire billing cycle on autopilot — calendar → timesheets → work slips → email administration.**
 
@@ -28,7 +28,7 @@
 
 ---
 
-## Weekly — every Friday
+## 🗓️ Weekly — every Friday
 
 ```sh
 /hour-registration:weekly-tasks:0. weekly-orchestrator
@@ -43,7 +43,7 @@
 
 ---
 
-## Monthly — first Monday of the month
+## 📆 Monthly — first Monday of the month
 
 ```sh
 /hour-registration:monthly-tasks:0. monthly-orchestrator
