@@ -39,13 +39,12 @@ Or install from a local path:
 /hour-registration:monthly-tasks:0. monthly-orchestrator
 ```
 
-Steps 4–5 run without pausing; step 6 asks for confirmation before sending and cleans up the download folder afterwards.
+Step 1 runs without pausing; step 2 asks for confirmation before sending and cleans up the download folder afterwards.
 
 | Step | Command | What it does |
 |------|---------|--------------|
-| 4 | `download-hours-eneco` | Downloads previous month's timesheets from Eneco Fieldglass |
-| 5 | `download-ns-reishistorie` | Downloads previous month's NS travel history |
-| 6 | `send-email-administration` | Emails work slips + travel costs to Sourcelabs admin, then deletes the download folder |
+| 1 | `download-monthly-documents` | Downloads previous month's timesheets (Eneco Fieldglass) and NS travel history |
+| 2 | `send-email-administration` | Emails work slips + travel costs to Sourcelabs admin, then deletes the download folder |
 
 > Download paths use `MM-YY` format (e.g. April 2026 → `04-26`). Orchestrators always target the **previous** month (Europe/Amsterdam timezone).
 
