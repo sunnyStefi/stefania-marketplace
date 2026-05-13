@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.claude.monthly-worksheet</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/zsh</string>
+    <string>/path/to/hour-registration/schedule/run-monthly-worksheet.sh</string>
+  </array>
+  <!-- Fires every Monday at 08:00; the script itself skips non-first Mondays -->
+  <key>StartCalendarInterval</key>
+  <dict>
+    <key>Weekday</key>
+    <integer>1</integer>
+    <key>Hour</key>
+    <integer>8</integer>
+    <key>Minute</key>
+    <integer>0</integer>
+  </dict>
+  <key>WorkingDirectory</key>
+  <string>/path/to/hour-registration</string>
+  <key>StandardOutPath</key>
+  <string>/Users/YOUR_USERNAME/.claude/jobs/monthly-worksheet.log</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/YOUR_USERNAME/.claude/jobs/monthly-worksheet-error.log</string>
+</dict>
+</plist>

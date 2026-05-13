@@ -3,8 +3,8 @@
   "description": "Automates weekly timesheet submission (Eneco Fieldglass + Sourcelabs) and monthly billing cycle (download work slips, NS travel history, send to administration).",
   "version": "0.1.0",
   "author": {
-    "name": "<YOUR_NAME>",
-    "email": "<YOUR_EMAIL>"
+    "name": "Stefania Pozzi",
+    "email": "s.pozzi@sourcelabs.nl"
   },
   "requires": {
     "mcpServers": ["playwright", "google-calendar", "microsoft-365"],
