@@ -1,26 +1,26 @@
 <div align="center">
 
-# ⏱️ hour-registration
+# hour-registration
 
 **A Claude Code plugin that runs your entire billing cycle on autopilot — calendar → timesheets → work slips → email administration.**
 
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-Plugin-D97757?style=for-the-badge&logo=anthropic&logoColor=white)](https://claude.ai/code)
-[![Schedule](https://img.shields.io/badge/automated-launchd-blue?style=for-the-badge&logo=apple&logoColor=white)](#-scheduling)
+[![Schedule](https://img.shields.io/badge/automated-launchd-blue?style=for-the-badge&logo=apple&logoColor=white)](#scheduling)
 [![Platform](https://img.shields.io/badge/macOS-only-lightgrey?style=for-the-badge&logo=apple&logoColor=white)](#)
 
 </div>
 
 ---
 
-## 📥 Installation
+## Installation
 
-🛒 **From a marketplace**
+**From a marketplace**
 
 ```sh
 /plugin install hour-registration@<marketplace>
 ```
 
-📂 **From a local path**
+**From a local path**
 
 ```sh
 /plugin install /path/to/hour-registration
@@ -28,22 +28,22 @@
 
 ---
 
-## 🗓️ Weekly — every Friday
+## Weekly — every Friday
 
 ```sh
 /hour-registration:weekly-tasks:0. weekly-orchestrator
 ```
 
-| 🔢 Step | 🛠️ Command | 📝 What it does |
+| Step | Command | What it does |
 |:-:|---|---|
-| 1️⃣ | `list-weekly-hours-calendar` | Reads Work calendar → `hour-registration/data/worked_hours.json` |
-| 2️⃣ | `add-weekly-hours` | Submits hours to Eneco Fieldglass and Sourcelabs Administratie |
+| 1 | `list-weekly-hours-calendar` | Reads Work calendar → `hour-registration/data/worked_hours.json` |
+| 2 | `add-weekly-hours` | Submits hours to Eneco Fieldglass and Sourcelabs Administratie |
 
-> 🤖 **Automated:** runs every Friday at **10:00** via macOS `launchd` (see [Scheduling](#-scheduling)).
+> **Automated:** runs every Friday at **10:00** via macOS `launchd` (see [Scheduling](#scheduling)).
 
 ---
 
-## 📆 Monthly — first Monday of the month
+## Monthly — first Monday of the month
 
 ```sh
 /hour-registration:monthly-tasks:0. monthly-orchestrator
@@ -51,22 +51,22 @@
 
 Step 1 runs without pausing; step 2 asks for confirmation before sending and cleans up the download folder afterwards.
 
-| 🔢 Step | 🛠️ Command | 📝 What it does |
+| Step | Command | What it does |
 |:-:|---|---|
-| 1️⃣ | `download-monthly-documents` | Downloads previous month's timesheets (Eneco Fieldglass) and NS travel history |
-| 2️⃣ | `send-email-administration` | Emails work slips + travel costs to Sourcelabs admin, then deletes the download folder |
+| 1 | `download-monthly-documents` | Downloads previous month's timesheets (Eneco Fieldglass) and NS travel history |
+| 2 | `send-email-administration` | Emails work slips + travel costs to Sourcelabs admin, then deletes the download folder |
 
-> 📅 Download paths use `MM-YY` format (e.g. April 2026 → `04-26`). Orchestrators always target the **previous** month (Europe/Amsterdam timezone).
+> Download paths use `MM-YY` format (e.g. April 2026 → `04-26`). Orchestrators always target the **previous** month (Europe/Amsterdam timezone).
 
-> 🤖 **Automated:** runs on the first Monday of each month at **08:00** via macOS `launchd` (see [Scheduling](#-scheduling)).
+> **Automated:** runs on the first Monday of each month at **08:00** via macOS `launchd` (see [Scheduling](#scheduling)).
 
 ---
 
-## ⏰ Scheduling
+## Scheduling
 
 Both orchestrators run automatically via macOS `launchd` jobs.
 
-### 📁 Files
+### Files
 
 | File | Purpose |
 |------|---------|
@@ -80,7 +80,7 @@ Both orchestrators run automatically via macOS `launchd` jobs.
 | `~/.claude/jobs/monthly-worksheet.log` | Monthly stdout log |
 | `~/.claude/jobs/monthly-worksheet-error.log` | Monthly stderr log |
 
-### 🏁 First-time setup
+### First-time setup
 
 Run `install.sh` once from the `schedule/` directory:
 
@@ -89,11 +89,11 @@ zsh schedule/install.sh
 ```
 
 This script:
-1. 🔧 Replaces the `/path/to/hour-registration` and `YOUR_USERNAME` placeholders in all schedule files with the real paths.
-2. 📋 Copies both plists to `~/Library/LaunchAgents/` and loads them.
-3. 📂 Creates the `~/.claude/jobs/` log directory.
+1. Replaces the `/path/to/hour-registration` and `YOUR_USERNAME` placeholders in all schedule files with the real paths.
+2. Copies both plists to `~/Library/LaunchAgents/` and loads them.
+3. Creates the `~/.claude/jobs/` log directory.
 
-### 🎛️ Manage the jobs
+### Manage the jobs
 
 ```sh
 launchctl list | grep com.claude                                              # verify loaded
@@ -103,25 +103,25 @@ launchctl unload ~/Library/LaunchAgents/com.claude.weekly-worksheet.plist    # p
 launchctl unload ~/Library/LaunchAgents/com.claude.monthly-worksheet.plist   # pause monthly
 ```
 
-> ⚠️ **Requirements:** Mac must be awake and logged in at the scheduled times. If the machine was asleep and misses the Friday 10:00 window, launchd will fire the job when it next wakes — the weekly orchestrator handles this gracefully.
+> **Requirements:** Mac must be awake and logged in at the scheduled times. If the machine was asleep and misses the Friday 10:00 window, launchd will fire the job when it next wakes — the weekly orchestrator handles this gracefully.
 
 ---
 
-## 📍 Location rules
+## Location rules
 
 All location-to-system mappings live in `rules/context.md`, alongside the rest of the personal configuration. Edit only that file when adding a new client site or changing a project code — it is the **single source of truth**.
 
 ---
 
-## 🧰 Setup
+## Setup
 
-### 1️⃣ Install the plugin
+### 1. Install the plugin
 
 ```sh
 /plugin install /path/to/hour-registration
 ```
 
-### 2️⃣ Configure credentials
+### 2. Configure credentials
 
 ```sh
 security add-generic-password -s "worksheet-fieldglass"  -a username -w "YOUR_USERNAME" -U
@@ -132,9 +132,9 @@ security add-generic-password -s "worksheet-ns"          -a username -w "YOUR_EM
 security add-generic-password -s "worksheet-ns"          -a password -w "YOUR_PASSWORD" -U
 ```
 
-> 🔐 The first time a Keychain entry is read, macOS will prompt — choose **Always Allow**. To update, re-run with `-U`. To inspect: open **Keychain Access.app** and search `worksheet-`.
+> The first time a Keychain entry is read, macOS will prompt — choose **Always Allow**. To update, re-run with `-U`. To inspect: open **Keychain Access.app** and search `worksheet-`.
 
-### 3️⃣ Configure context
+### 3. Configure context
 
 ```sh
 cp rules/context.md.example rules/context.md
@@ -142,13 +142,13 @@ cp rules/context.md.example rules/context.md
 
 Fill in your name, email, company contacts, NS card ID, project codes, and location rules table.
 
-### 4️⃣ Set up scheduling
+### 4. Set up scheduling
 
 ```sh
 zsh schedule/install.sh
 ```
 
-### 5️⃣ Configure MCP servers
+### 5. Configure MCP servers
 
 Edit `~/.claude/claude_desktop_config.json`:
 
@@ -161,16 +161,16 @@ Edit `~/.claude/claude_desktop_config.json`:
 }
 ```
 
-🔄 Restart Claude Desktop after saving.
+Restart Claude Desktop after saving.
 
-### 6️⃣ Verify
+### 6. Verify
 
-Type `/hour-registration` in Claude Code — you should see all **7 commands** listed under `monthly-tasks` and `weekly-tasks`. ✅
+Type `/hour-registration` in Claude Code — you should see all **7 commands** listed under `monthly-tasks` and `weekly-tasks`.
 
 ---
 
 <div align="center">
 
-✨ **One Friday morning. Zero portals. Done before coffee.** ✨
+**One Friday morning. Zero portals. Done before coffee.**
 
 </div>

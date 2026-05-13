@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🛒 Stefania's Claude Code Marketplace
+# Stefania's Claude Code Marketplace
 
 **A curated collection of [Claude Code](https://claude.ai/code) plugins that automate the unglamorous parts of consulting — so the hours you bill stay focused on actual work.**
 
@@ -12,7 +12,7 @@
 
 ---
 
-## 📦 Plugins
+## Plugins
 
 <table>
   <thead>
@@ -24,24 +24,24 @@
   </thead>
   <tbody>
     <tr>
-      <td>⏱️ <a href="./hour-registration/README.md"><b>hour-registration</b></a></td>
+      <td><a href="./hour-registration/README.md"><b>hour-registration</b></a></td>
       <td>Automates the complete billing cycle for consultant invoicing — calendar → timesheets → work slips → email.</td>
-      <td align="center">🟢 Live</td>
+      <td align="center">Live</td>
     </tr>
   </tbody>
 </table>
 
 ---
 
-## 🚀 Installation
+## Installation
 
-### 🌐 From this marketplace *(once hosted)*
+### From this marketplace *(once hosted)*
 
 ```sh
 /plugin install hour-registration@stefania
 ```
 
-### 💻 From a local clone
+### From a local clone
 
 ```sh
 git clone <this-repo> ~/stefania-marketplace
@@ -57,6 +57,6 @@ Then in Claude Code:
 
 <div align="center">
 
-✨ **Built for consultants who'd rather not click through 12 portals every Friday.** ✨
+**Built for consultants who'd rather not click through 12 portals every Friday.**
 
 </div>
