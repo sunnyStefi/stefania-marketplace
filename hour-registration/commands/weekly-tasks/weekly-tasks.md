@@ -33,7 +33,7 @@ Save the result to `hour-registration/data/worked_hours.json`. The directory is 
 
 After saving, display the contents in the console for verification.
 
-If the Google Calendar MCP returns an error, retry once after 30 seconds. If it fails again, stop and report — do not write a partial or empty JSON file.
+On error, do not write a partial or empty JSON file.
 
 ## Step 2 — Submit hours
 
@@ -60,12 +60,6 @@ Run the steps below **twice** — once per system row:
 
 ## Error handling
 
-If any step fails:
+On transient errors (network timeout, page crash), clear any partially entered fields before retrying.
 
-1. **Stop immediately** — do not run subsequent steps.
-2. **Report clearly**: which step failed, what the error was, and whether any partial data was written.
-3. **How to resume**: fix the reported issue, then re-run (duplicate-submission guards in step 2 prevent double-posting).
-
-- **Transient error** (network timeout, page crash): clear any partially entered fields, wait 30 seconds, retry from step 1. At most **2 retries** before reporting failure.
-- **Unknown location value**: stop immediately and report which day — do not enter partial hours.
-- **Login failure**: stop and report — do not retry credentials automatically.
+**How to resume**: fix the reported issue, then re-run — duplicate-submission guards in step 2 prevent double-posting.
