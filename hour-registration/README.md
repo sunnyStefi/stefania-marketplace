@@ -31,7 +31,7 @@
 ## 🗓️ Weekly — every Friday
 
 ```sh
-/hour-registration:weekly-tasks:weekly-tasks
+/hour-registration:weekly-tasks
 ```
 
 Reads Work calendar → saves to `hour-registration/data/worked_hours.json` → submits hours to CLIENT and EMPLOYER.
@@ -43,7 +43,7 @@ Reads Work calendar → saves to `hour-registration/data/worked_hours.json` → 
 ## 📆 Monthly — first Monday of the month
 
 ```sh
-/hour-registration:monthly-tasks:monthly-tasks
+/hour-registration:monthly-tasks
 ```
 
 Downloads previous month's timesheets (CLIENT) and NS travel history → asks for confirmation → emails work slips + travel costs to EMPLOYER admin → deletes the download folder.
