@@ -2,7 +2,7 @@
 
 # 🛒 Stefania's Claude Code Marketplace
 
-**A curated collection of [Claude Code](https://claude.ai/code) plugins that automate the unglamorous parts of consulting — so the hours you bill stay focused on actual work.**
+Automate the boring parts of software engineering.
 
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-Plugin%20Marketplace-D97757?style=for-the-badge&logo=anthropic&logoColor=white)](https://claude.ai/code)
 [![Status](https://img.shields.io/badge/status-active-success?style=for-the-badge)](#)
