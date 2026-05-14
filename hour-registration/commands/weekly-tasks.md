@@ -49,7 +49,7 @@ Run the steps below **twice** — once per system column:
 
 | Variable | CLIENT | EMPLOYER |
 |---|---|---|
-| `{url}` | `https://www.eu.fieldglass.cloud.sap/time_sheet_list.do?cf=1` | `https://app-administration-app.azurewebsites.net/time-tracking` |
+| `{url}` | CLIENT URL from `rules/config.md` | EMPLOYER URL from `rules/config.md` |
 | `{keychain}` | CLIENT keychain service from `rules/config.md` | EMPLOYER keychain service from `rules/config.md` |
 | `{already-submitted}` | status is not `Draft` / `Not submitted` | any non-zero hours already entered, or week is locked/submitted |
 | `{columns}` | CLIENT hours column | EMPLOYER project, hours, and Thuiswerken Vergoeding columns |

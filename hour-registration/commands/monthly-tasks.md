@@ -15,7 +15,7 @@ Use the Playwright MCP server. Keychain service names come from the Credentials 
 | Variable | CLIENT | NS Reishistorie |
 |---|---|---|
 | `{name}` | CLIENT | NS Reishistorie |
-| `{url}` | `https://www.eu.fieldglass.cloud.sap/time_sheet_list.do?cf=1` | `https://www.ns.nl/mijnns#/reishistorie?card={NS_CARD_ID}&period=previous-month` |
+| `{url}` | CLIENT URL from `rules/config.md` | `https://www.ns.nl/mijnns#/reishistorie?card={NS_CARD_ID}&period=previous-month` |
 | `{keychain}` | CLIENT keychain service from `rules/config.md` | NS keychain service from `rules/config.md` |
 | `{no-data-condition}` | no timesheets found for the previous month | no journeys found for the previous month |
 | `{download-action}` | Download all timesheets for the previous month | Select all journeys (exclude **Automatisch saldo opladen**), choose **Download overzicht x declaraties**, click **Download** |
