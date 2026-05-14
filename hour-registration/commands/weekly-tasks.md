@@ -12,7 +12,7 @@ Run both weekly steps in sequence without pausing. CLIENT and EMPLOYER are defin
 
 ## Step 1 — List hours from calendar
 
-Use the Google Calendar MCP server to access my "Work" calendar and retrieve all workdays for the current week (Monday through Friday).
+Use the Google Calendar MCP server to access the work calendar named in the **Calendar** section of `rules/context.md` and retrieve all workdays for the current week (Monday through Friday).
 
 For each workday (Mon–Fri), determine the total hours and location using the **location rules**.
 
