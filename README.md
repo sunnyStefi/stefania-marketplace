@@ -35,7 +35,15 @@
 
 ## 🚀 Installation
 
-### From this marketplace *(once hosted)*
+### 1. Add this marketplace
+
+In Claude Code, run:
+
+```sh
+/plugin marketplace add sunnyStefi/stefania-marketplace
+```
+
+### 2. Install a plugin
 
 ```sh
 /plugin install hour-registration@stefania
@@ -44,7 +52,7 @@
 ### From a local clone
 
 ```sh
-git clone <this-repo> ~/stefania-marketplace
+git clone https://github.com/sunnyStefi/stefania-marketplace ~/stefania-marketplace
 ```
 
 Then in Claude Code:
