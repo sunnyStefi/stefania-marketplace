@@ -39,6 +39,12 @@ Throughout this plugin, **CLIENT** refers to the client timesheet system and **E
 | Vacation | Vakantie / Vacation |
 | National Holiday | Feestdag / National Holiday |
 
+## Calendar
+
+| Field | Value |
+|---|---|
+| Work calendar | `Work` (Google Calendar) |
+
 ## NS card
 
 | Field | Value |

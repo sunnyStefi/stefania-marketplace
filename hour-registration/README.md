@@ -126,22 +126,7 @@ Fill in your name, email, company contacts, NS card ID, project codes, and locat
 zsh schedule/install.sh
 ```
 
-### 5. Configure MCP servers
-
-Edit `~/.claude/claude_desktop_config.json`:
-
-```json
-{
-  "mcpServers": {
-    "playwright":      { "command": "npx", "args": ["@playwright/mcp@latest"] },
-    "google-calendar": { "command": "npx", "args": ["@modelcontextprotocol/server-google-calendar"] }
-  }
-}
-```
-
-Restart Claude Desktop after saving.
-
-### 6. Verify
+### 5. Verify
 
 Type `/hour-registration` in Claude Code — you should see **2 commands**: `monthly-tasks` and `weekly-tasks`.
 

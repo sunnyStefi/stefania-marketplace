@@ -1,6 +1,6 @@
 {
   "name": "hour-registration",
-  "description": "Automates weekly timesheet submission (Eneco Fieldglass + Sourcelabs) and monthly billing cycle (download work slips, NS travel history, send to administration).",
+  "description": "Automates weekly timesheet submission and monthly billing cycle (download work slips, travel history, send to administration).",
   "version": "0.1.0",
   "author": {
     "name": "Stefania Pozzi",
@@ -10,8 +10,8 @@
     "mcpServers": ["playwright", "google-calendar", "microsoft-365"],
     "platform": "darwin",
     "credentials": [
-      "worksheet-fieldglass (username + password)",
-      "worksheet-sourcelabs (username + password)",
+      "worksheet-client (username + password)",
+      "worksheet-employer (username + password)",
       "worksheet-ns (username + password)"
     ]
   }
