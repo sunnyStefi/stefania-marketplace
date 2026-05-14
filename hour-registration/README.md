@@ -14,6 +14,13 @@
 
 
 
+- 🗓️ [Weekly tasks](#️-weekly-tasks)
+- 📆 [Monthly tasks](#-monthly-tasks)
+- ⚙️ [Setup](#-setup)
+- ⏰ [Scheduling](#️-scheduling)
+
+---
+
 ## 🗓️ Weekly tasks
 Reads from your calendar → submits hours to CLIENT and EMPLOYER.
 ```sh
@@ -33,7 +40,7 @@ Downloads CLIENT previous month's timesheets and NS travel history → emails wo
 > 🤖 **Automated:** runs on the first Monday of each month at **10:00** via macOS `launchd` (see [Scheduling](#-scheduling)).
 
 
-##  Setup
+## ⚙️ Setup
 
 ### 1. Install the plugin
 
