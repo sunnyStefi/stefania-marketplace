@@ -2,6 +2,8 @@
 
 # ⏱️ Hour Registration
 
+<img src="data/tiger-clock.jpg" alt="Tiger Clock" width="300"/>
+
 **A Claude Code plugin that runs your entire billing cycle on autopilot — calendar → timesheets → work slips → email administration.**
 
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-Plugin-D97757?style=for-the-badge&logo=anthropic&logoColor=white)](https://claude.ai/code)
