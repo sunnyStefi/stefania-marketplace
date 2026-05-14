@@ -1,11 +1,13 @@
 {
   "name": "stefania",
-  "owner": "Stefania Pozzi",
+  "owner": {
+    "name": "Stefania Pozzi"
+  },
   "plugins": [
     {
       "name": "hour-registration",
       "path": "./hour-registration",
-      "description": "Automates the complete billing cycle: weekly timesheet submission to Eneco and Sourcelabs, monthly download of work slips and NS travel history, and emailing everything to administration."
+      "description": "Automates the complete billing cycle: weekly timesheet submission to CLIENT and EMPLOYER, monthly download of work slips and NS travel history, and emailing everything to administration."
     }
   ]
 }
