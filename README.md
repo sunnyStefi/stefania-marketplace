@@ -25,7 +25,7 @@ Automate routine software engineering workflows
   <tbody>
     <tr>
       <td>⏱️ <a href="./hour-registration/README.md"><b>hour-registration</b></a></td>
-      <td>Automates the complete billing cycle for consultant invoicing <br> calendar → timesheets → work slips → email</td>
+      <td>Automates the complete billing cycle for consultant invoicing <br/> calendar → timesheets → work slips → email</td>
       <td align="center">🟢 Live</td>
     </tr>
   </tbody>
@@ -50,8 +50,3 @@ In Claude Code, run:
 ```
 ---
 
-<div align="center">
-
-**Built for consultants who'd rather not click through 12 portals every Friday.**
-
-</div>
