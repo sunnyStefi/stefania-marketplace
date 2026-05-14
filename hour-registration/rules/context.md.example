@@ -16,22 +16,24 @@ paths:
 
 ## Companies
 
-| Role | Company |
+Throughout this plugin, **CLIENT** refers to the client timesheet system and **EMPLOYER** refers to the employer's administration tool. The names below are the canonical values used everywhere these placeholders appear.
+
+| Name | Value |
 |---|---|
-| Employer | Your employer |
-| Client | Your client |
+| CLIENT | Your client's timesheet system |
+| EMPLOYER | Your employer's administration tool |
 
 ## Contacts
 
 | Name | Role | Email |
 |---|---|---|
-| Admin contact name | Administration | admin@company.com |
+| Admin contact name | EMPLOYER administration | admin@company.com |
 
 ## Project codes
 
 | Project | Code |
 |---|---|
-| Default (client on-site / remote) | Client-YourName |
+| Default (CLIENT on-site / remote) | Client-YourName |
 | Meetup | Meetup |
 | Leave / Sick | Verlof / Leave |
 | Vacation | Vakantie / Vacation |
@@ -43,6 +45,14 @@ paths:
 |---|---|
 | Card ID | xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx |
 
+## Credentials (macOS Keychain)
+
+| System | Keychain service |
+|---|---|
+| CLIENT | `worksheet-client` |
+| EMPLOYER | `worksheet-employer` |
+| NS | `worksheet-ns` |
+
 ## Location rules
 
 Canonical mapping from a workday's `location` to how it should be entered in each system.
@@ -50,12 +60,12 @@ Canonical mapping from a workday's `location` to how it should be entered in eac
 ### How each step uses this table
 
 - **Step 1 — calendar** picks a `location` for each weekday based on the **Calendar match** column. If no event matches, fall back to the default location (first row).
-- **Step 2 — client timesheet** enters the **Client hours** value for that day.
-- **Step 3 — employer tool** enters the **Employer project**, **Employer hours**, and toggles **Home work allowance** as listed.
+- **Step 2 — CLIENT** enters the **CLIENT hours** value for that day.
+- **Step 3 — EMPLOYER** enters the **EMPLOYER project**, **EMPLOYER hours**, and toggles **Home work allowance** as listed.
 
 ### Location table
 
-| Location          | Calendar match       | Client hours | Employer project      | Employer hours | Home work allowance |
+| Location          | Calendar match       | CLIENT hours | EMPLOYER project      | EMPLOYER hours | Home work allowance |
 |-------------------|----------------------|--------------|-----------------------|----------------|---------------------|
 | `Client`          | _no event scheduled_ | 8            | `Client-YourName`     | 8              | checked             |
 | `City A`          | `City A`             | 8            | `Client-YourName`     | 8              | unchecked           |
@@ -67,7 +77,7 @@ Canonical mapping from a workday's `location` to how it should be entered in eac
 
 ### Notes
 
-- The default project (`Client-YourName`) is entered on the default row in the employer tool; other projects are added with the **+** button.
+- The default project (`Client-YourName`) is entered on the default row in the EMPLOYER tool; other projects are added with the **+** button.
 - Home work allowance only applies to the default project row; the column is `n/a` for all others.
 - A `location` value not present in this table is an error — Step 1 must produce one of the keys above, and Steps 2 and 3 must refuse to proceed on unknown values.
 
