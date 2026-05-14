@@ -31,13 +31,10 @@
 ## 🗓️ Weekly — every Friday
 
 ```sh
-/hour-registration:weekly-tasks:0. weekly-orchestrator
+/hour-registration:weekly-tasks:weekly-tasks
 ```
 
-| Step | Command | What it does |
-|:-:|---|---|
-| 1 | `list-weekly-hours-calendar` | Reads Work calendar → `hour-registration/data/worked_hours.json` |
-| 2 | `add-weekly-hours` | Submits hours to CLIENT and EMPLOYER (see `rules/context.md`) |
+Reads Work calendar → saves to `hour-registration/data/worked_hours.json` → submits hours to CLIENT and EMPLOYER.
 
 > **Automated:** runs every Friday at **10:00** via macOS `launchd` (see [Scheduling](#-scheduling)).
 
@@ -46,17 +43,12 @@
 ## 📆 Monthly — first Monday of the month
 
 ```sh
-/hour-registration:monthly-tasks:0. monthly-orchestrator
+/hour-registration:monthly-tasks:monthly-tasks
 ```
 
-Step 1 runs without pausing; step 2 asks for confirmation before sending and cleans up the download folder afterwards.
+Downloads previous month's timesheets (CLIENT) and NS travel history → asks for confirmation → emails work slips + travel costs to EMPLOYER admin → deletes the download folder.
 
-| Step | Command | What it does |
-|:-:|---|---|
-| 1 | `download-monthly-documents` | Downloads previous month's timesheets (CLIENT) and NS travel history |
-| 2 | `send-email-administration` | Emails work slips + travel costs to EMPLOYER admin, then deletes the download folder |
-
-> Download paths use `MM-YY` format (e.g. April 2026 → `04-26`). Orchestrators always target the **previous** month (Europe/Amsterdam timezone).
+> Download paths use `MM-YY` format (e.g. April 2026 → `04-26`). Always targets the **previous** month (Europe/Amsterdam timezone).
 
 > **Automated:** runs on the first Monday of each month at **10:00** via macOS `launchd` (see [Scheduling](#-scheduling)).
 
@@ -64,7 +56,7 @@ Step 1 runs without pausing; step 2 asks for confirmation before sending and cle
 
 ## ⏰ Scheduling
 
-Both orchestrators run automatically via macOS `launchd` jobs.
+Both commands run automatically via macOS `launchd` jobs.
 
 ### Files
 
@@ -97,13 +89,13 @@ This script:
 
 ```sh
 launchctl list | grep com.claude                                              # verify loaded
-launchctl start com.claude.weekly-worksheet                                   # trigger weekly immediately
-launchctl start com.claude.monthly-worksheet                                  # trigger monthly immediately
+launchctl start com.claude.weekly-worksheet                                   # trigger weekly-tasks immediately
+launchctl start com.claude.monthly-worksheet                                  # trigger monthly-tasks immediately
 launchctl unload ~/Library/LaunchAgents/com.claude.weekly-worksheet.plist    # pause weekly
 launchctl unload ~/Library/LaunchAgents/com.claude.monthly-worksheet.plist   # pause monthly
 ```
 
-> **Requirements:** Mac must be awake and logged in at the scheduled times. If the machine was asleep and misses the Friday 10:00 window, launchd will fire the job when it next wakes — the weekly orchestrator handles this gracefully.
+> **Requirements:** Mac must be awake and logged in at the scheduled times. If the machine was asleep and misses the Friday 10:00 window, launchd will fire the job when it next wakes — the weekly-tasks command handles this gracefully.
 
 ---
 
@@ -167,7 +159,7 @@ Restart Claude Desktop after saving.
 
 ### 6. Verify
 
-Type `/hour-registration` in Claude Code — you should see all **7 commands** listed under `monthly-tasks` and `weekly-tasks`.
+Type `/hour-registration` in Claude Code — you should see **2 commands**: `monthly-tasks` and `weekly-tasks`.
 
 ---
 

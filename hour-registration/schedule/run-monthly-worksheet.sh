@@ -11,4 +11,4 @@ day=$(date +%d)
 (( day > 7 )) && exit 0
 
 cd "$PROJECT_DIR" && \
-~/.local/bin/claude --print "/hour-registration:monthly-tasks:0. monthly-orchestrator"
+~/.local/bin/claude --print "/hour-registration:monthly-tasks:monthly-tasks"
