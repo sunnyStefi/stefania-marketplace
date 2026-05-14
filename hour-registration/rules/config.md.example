@@ -51,6 +51,13 @@ Throughout this plugin, **CLIENT** refers to the client timesheet system and **E
 |---|---|
 | Card ID | xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx |
 
+## URLs
+
+| System | URL |
+|---|---|
+| CLIENT | `https://your-client-timesheet-url` |
+| EMPLOYER | `https://your-employer-admin-url` |
+
 ## Credentials (macOS Keychain)
 
 | System | Keychain service |
