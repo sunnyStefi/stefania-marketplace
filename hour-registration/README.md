@@ -58,7 +58,7 @@ Step 1 runs without pausing; step 2 asks for confirmation before sending and cle
 
 > Download paths use `MM-YY` format (e.g. April 2026 → `04-26`). Orchestrators always target the **previous** month (Europe/Amsterdam timezone).
 
-> **Automated:** runs on the first Monday of each month at **08:00** via macOS `launchd` (see [Scheduling](#-scheduling)).
+> **Automated:** runs on the first Monday of each month at **10:00** via macOS `launchd` (see [Scheduling](#-scheduling)).
 
 ---
 
@@ -73,7 +73,7 @@ Both orchestrators run automatically via macOS `launchd` jobs.
 | `schedule/run-weekly-worksheet.sh` | Weekly wrapper script |
 | `schedule/com.claude.weekly-worksheet.plist` | launchd job (every Friday 10:00) |
 | `schedule/run-monthly-worksheet.sh` | Monthly wrapper script |
-| `schedule/com.claude.monthly-worksheet.plist` | launchd job (every Monday 08:00; script skips non-first Mondays) |
+| `schedule/com.claude.monthly-worksheet.plist` | launchd job (every Monday 10:00; script skips non-first Mondays) |
 | `schedule/install.sh` | One-shot setup — patches paths and registers both agents |
 | `~/.claude/jobs/weekly-worksheet.log` | Weekly stdout log |
 | `~/.claude/jobs/weekly-worksheet-error.log` | Weekly stderr log |

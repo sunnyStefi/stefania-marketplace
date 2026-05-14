@@ -44,7 +44,7 @@ done
 echo ""
 echo "Done."
 echo "  Weekly job  : every Friday at 10:00"
-echo "  Monthly job : first Monday of each month at 08:00"
+echo "  Monthly job : first Monday of each month at 10:00"
 echo ""
 echo "Verify with:"
 echo "  launchctl list | grep com.claude"
