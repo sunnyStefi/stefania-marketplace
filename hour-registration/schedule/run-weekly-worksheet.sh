@@ -7,4 +7,4 @@
 PROJECT_DIR="$HOME/path/to/hour-registration"
 
 cd "$PROJECT_DIR" && \
-~/.local/bin/claude --print "/hour-registration:weekly-tasks:weekly-tasks"
+~/.local/bin/claude --print "/hour-registration:weekly-tasks"
