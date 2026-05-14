@@ -4,7 +4,7 @@ description: "List this week's worked hours from Google Calendar and submit them
 model: sonnet
 ---
 
-Run both weekly steps in sequence without pausing. CLIENT and EMPLOYER are defined in `rules/context.md` (Companies section).
+Run both weekly steps in sequence without pausing. CLIENT and EMPLOYER are defined in `rules/config.md` (Companies section).
 
 ## Week definition
 
@@ -12,7 +12,7 @@ Run both weekly steps in sequence without pausing. CLIENT and EMPLOYER are defin
 
 ## Step 1 — List hours from calendar
 
-Use the Google Calendar MCP server to access the work calendar named in the **Calendar** section of `rules/context.md` and retrieve all workdays for the current week (Monday through Friday).
+Use the Google Calendar MCP server to access the work calendar named in the **Calendar** section of `rules/config.md` and retrieve all workdays for the current week (Monday through Friday).
 
 For each workday (Mon–Fri), determine the total hours and location using the **location rules**.
 
