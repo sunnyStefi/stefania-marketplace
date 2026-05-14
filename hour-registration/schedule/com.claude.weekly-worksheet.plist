@@ -24,6 +24,6 @@
   <key>StandardOutPath</key>
   <string>/Users/YOUR_USERNAME/.claude/jobs/weekly-worksheet.log</string>
   <key>StandardErrorPath</key>
-  <string>/Users/YOUR_USERNAME/.claude/jobs/weekly-worksheet-error.log</string>
+  <string>/Users/YOUR_USERNAME/.claude/jobs/weekly-worksheet.log</string>
 </dict>
 </plist>

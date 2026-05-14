@@ -51,10 +51,8 @@ Both commands run automatically via macOS `launchd` jobs.
 | `schedule/run-monthly-worksheet.sh` | Monthly wrapper script |
 | `schedule/com.claude.monthly-worksheet.plist` | launchd job (every Monday 10:00; script skips non-first Mondays) |
 | `schedule/install.sh` | One-shot setup — patches paths and registers both agents |
-| `~/.claude/jobs/weekly-worksheet.log` | Weekly stdout log |
-| `~/.claude/jobs/weekly-worksheet-error.log` | Weekly stderr log |
-| `~/.claude/jobs/monthly-worksheet.log` | Monthly stdout log |
-| `~/.claude/jobs/monthly-worksheet-error.log` | Monthly stderr log |
+| `~/.claude/jobs/weekly-worksheet.log` | Weekly log (stdout + stderr) |
+| `~/.claude/jobs/monthly-worksheet.log` | Monthly log (stdout + stderr) |
 
 ### First-time setup
 
