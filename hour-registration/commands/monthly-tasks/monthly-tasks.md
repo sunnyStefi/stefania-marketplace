@@ -66,8 +66,7 @@ If deletion fails, report the error but do **not** treat it as an email failure 
 
 If any step fails:
 
-1. **Stop immediately** — do not run subsequent steps.
-2. **Report clearly**: which step failed, what the error was, and what was (or was not) saved to `~/Downloads/{MM-YY}/`.
-3. **How to resume**: fix the reported issue and re-run only the failed step. Step 1 is safe to re-run (it overwrites any partially downloaded files). Step 2 checks that the download directory is non-empty before sending.
+1. **Report clearly**: which step failed, what the error was, and what was (or was not) saved to `~/Downloads/{MM-YY}/`.
+2. **How to resume**: fix the reported issue and re-run only the failed step. Step 1 is safe to re-run (it overwrites any partially downloaded files). Step 2 checks that the download directory is non-empty before sending.
 
 For download timeouts: if retries are exhausted, report which file(s) could not be downloaded and leave the directory with any successfully saved files.
