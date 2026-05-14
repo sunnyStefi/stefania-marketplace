@@ -17,7 +17,6 @@
 
 All personal configuration lives in `rules/config.md` (gitignored). It is the single source of truth for your personal information — edit only that file when changing personal details, project codes, or client sites. Create a `rules/config.md` to get started.
 
----
 
 ## 🗓️ Weekly tasks
 
@@ -29,7 +28,6 @@ Reads Work calendar → saves to `hour-registration/data/worked_hours.json` → 
 
 > 🤖 **Automated:** runs every Friday at **10:00** via macOS `launchd` (see [Scheduling](#-scheduling)).
 
----
 
 ## 📆 Monthly tasks
 
@@ -42,8 +40,6 @@ Downloads previous month's timesheets (CLIENT) and NS travel history → asks fo
 
 > 🤖 **Automated:** runs on the first Monday of each month at **10:00** via macOS `launchd` (see [Scheduling](#-scheduling)).
 
-
----
 
 ##  Setup
 
@@ -84,8 +80,6 @@ zsh schedule/install.sh
 
 Type `/hour-registration` in Claude Code — you should see **2 commands**: `monthly-tasks` and `weekly-tasks`.
 
----
-
 
 ## ⏰ Scheduling
 
@@ -103,7 +97,7 @@ Both commands run automatically via macOS `launchd` jobs.
 | `~/.claude/jobs/weekly-worksheet.log` | Weekly log (stdout + stderr) |
 | `~/.claude/jobs/monthly-worksheet.log` | Monthly log (stdout + stderr) |
 
-### 🌠 First-time setup
+### First-time setup
 
 Run `install.sh` once from the `schedule/` directory:
 
