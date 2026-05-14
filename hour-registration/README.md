@@ -2,7 +2,7 @@
 
 # ⏱️ Hour Registration
 
->>**A Claude Code plugin that runs your entire billing cycle on autopilot — calendar → timesheets → work slips → email administration.**
+**A Claude Code plugin that runs your entire billing cycle on autopilot — calendar → timesheets → work slips → email administration.**
 
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-Plugin-D97757?style=for-the-badge&logo=anthropic&logoColor=white)](https://claude.ai/code)
 [![Schedule](https://img.shields.io/badge/automated-launchd-blue?style=for-the-badge&logo=apple&logoColor=white)](#scheduling)
