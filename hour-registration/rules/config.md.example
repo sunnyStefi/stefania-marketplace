@@ -3,9 +3,9 @@ paths:
   - "commands/**/*.md"
 ---
 
-# Worksheet context
+# Worksheet config
 
-⚠️ IMPORTANT! Copy this file to `rules/context.md` (gitignored) and fill in your values. This file is the single source of truth for both personal configuration and location-to-system mappings — edit only this file when changing personal details, project codes, or client sites.
+⚠️ IMPORTANT! Copy this file to `rules/config.md` (gitignored) and fill in your values. This file is the single source of truth for both personal configuration and location-to-system mappings — edit only this file when changing personal details, project codes, or client sites.
 
 ## Identity
 
