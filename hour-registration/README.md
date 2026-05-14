@@ -5,38 +5,30 @@
 **A Claude Code plugin that runs your entire billing cycle on autopilot — calendar → timesheets → work slips → email administration.**
 
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-Plugin-D97757?style=for-the-badge&logo=anthropic&logoColor=white)](https://claude.ai/code)
-[![Schedule](https://img.shields.io/badge/automated-launchd-blue?style=for-the-badge&logo=apple&logoColor=white)](#scheduling)
 [![Google Calendar](https://img.shields.io/badge/MCP-Google%20Calendar-4285F4?style=for-the-badge&logo=googlecalendar&logoColor=white)](#-weekly-tasks)
 [![Playwright](https://img.shields.io/badge/MCP-Playwright-2EAD33?style=for-the-badge&logo=playwright&logoColor=white)](#)
 [![Microsoft 365](https://img.shields.io/badge/MCP-Microsoft%20365-0078D4?style=for-the-badge&logo=microsoft&logoColor=white)](#)
+[![Schedule](https://img.shields.io/badge/automated-launchd-blue?style=for-the-badge&logo=apple&logoColor=white)](#scheduling)
 
 </div>
 
 
-## 🙋🏼‍♂️ Personal Information and Location rules
-
-All personal configuration lives in `rules/config.md` (gitignored). It is the single source of truth for your personal information — edit only that file when changing personal details, project codes, or client sites. Create a `rules/config.md` to get started.
-
 
 ## 🗓️ Weekly tasks
-
+Reads from your calendar → submits hours to CLIENT and EMPLOYER.
 ```sh
 /hour-registration:weekly-tasks
 ```
-
-Reads Work calendar → saves to `hour-registration/data/worked_hours.json` → submits hours to CLIENT and EMPLOYER.
 
 > 🤖 **Automated:** runs every Friday at **10:00** via macOS `launchd` (see [Scheduling](#-scheduling)).
 
 
 ## 📆 Monthly tasks
+Downloads CLIENT previous month's timesheets and NS travel history → emails work slips + travel costs to ADMINISTRATION
 
 ```sh
 /hour-registration:monthly-tasks
 ```
-
-Downloads previous month's timesheets (CLIENT) and NS travel history → asks for confirmation → emails work slips + travel costs to EMPLOYER admin → deletes the download folder.
-
 
 > 🤖 **Automated:** runs on the first Monday of each month at **10:00** via macOS `launchd` (see [Scheduling](#-scheduling)).
 
@@ -69,6 +61,8 @@ cp rules/config.md.example rules/config.md
 ```
 
 Fill in your name, email, company contacts, NS card ID, project codes, and location rules table.
+
+`rules/config.md` is the single source of truth for your personal information — edit only that file when changing personal details, project codes, or client sites.
 
 ### 4. Set up scheduling
 
