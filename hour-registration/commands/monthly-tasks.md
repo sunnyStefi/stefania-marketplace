@@ -4,19 +4,19 @@ description: "Download the previous month's timesheets and travel costs, then em
 model: sonnet
 ---
 
-Run both monthly wrap-up steps in sequence. CLIENT and EMPLOYER are defined in `rules/context.md` (Companies section). `{MM-YY}` is the zero-padded month and two-digit year of the **previous** month, interpreted in the **Europe/Amsterdam** timezone (e.g. `04-26` for April 2026).
+Run both monthly wrap-up steps in sequence. CLIENT and EMPLOYER are defined in `rules/config.md` (Companies section). `{MM-YY}` is the zero-padded month and two-digit year of the **previous** month, interpreted in the **Europe/Amsterdam** timezone (e.g. `04-26` for April 2026).
 
 ## Step 1 — Download documents
 
-Use the Playwright MCP server. Keychain service names come from the Credentials section of `rules/context.md`.
+Use the Playwright MCP server. Keychain service names come from the Credentials section of `rules/config.md`.
 
-`{NS_CARD_ID}` is read from the **NS card** section of `rules/context.md`.
+`{NS_CARD_ID}` is read from the **NS card** section of `rules/config.md`.
 
 | Variable | CLIENT | NS Reishistorie |
 |---|---|---|
 | `{name}` | CLIENT | NS Reishistorie |
 | `{url}` | `https://www.eu.fieldglass.cloud.sap/time_sheet_list.do?cf=1` | `https://www.ns.nl/mijnns#/reishistorie?card={NS_CARD_ID}&period=previous-month` |
-| `{keychain}` | CLIENT keychain service from `rules/context.md` | NS keychain service from `rules/context.md` |
+| `{keychain}` | CLIENT keychain service from `rules/config.md` | NS keychain service from `rules/config.md` |
 | `{no-data-condition}` | no timesheets found for the previous month | no journeys found for the previous month |
 | `{download-action}` | Download all timesheets for the previous month | Select all journeys (exclude **Automatisch saldo opladen**), choose **Download overzicht x declaraties**, click **Download** |
 
@@ -29,7 +29,7 @@ For each system (in order):
 
 ## Step 2 — Send email
 
-Read the following from `rules/context.md`:
+Read the following from `rules/config.md`:
 - **Your email** from the Identity section
 - **Admin name and email** from the Contacts section
 
@@ -50,7 +50,7 @@ Before composing the email:
 
 ### Confirmation
 
-Ask for confirmation before sending. Show the recipient, subject, and attachment list in the prompt.
+Ask for confirmation before sending email. Show the recipient, subject, and attachment list in the prompt.
 
 ### After sending
 

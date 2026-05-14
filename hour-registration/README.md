@@ -12,22 +12,6 @@
 
 ---
 
-## 📥 Installation
-
-**From a marketplace**
-
-```sh
-/plugin install hour-registration@<marketplace>
-```
-
-**From a local path**
-
-```sh
-/plugin install /path/to/hour-registration
-```
-
----
-
 ## 🗓️ Weekly — every Friday
 
 ```sh
@@ -101,7 +85,7 @@ launchctl unload ~/Library/LaunchAgents/com.claude.monthly-worksheet.plist   # p
 
 ## 📍 Location rules
 
-All location-to-system mappings live in `rules/context.md`, alongside the rest of the personal configuration. Edit only that file when adding a new client site or changing a project code — it is the **single source of truth**.
+All location-to-system mappings live in `rules/config.md`, alongside the rest of the personal configuration. Edit only that file when adding a new client site or changing a project code — it is the **single source of truth**.
 
 ---
 
@@ -115,7 +99,7 @@ All location-to-system mappings live in `rules/context.md`, alongside the rest o
 
 ### 2. Configure credentials
 
-Pick any keychain service names you like for CLIENT and EMPLOYER (the examples below use `worksheet-client` and `worksheet-employer`), then record those exact names in the **Credentials** section of `rules/context.md` so the commands can find them.
+Pick any keychain service names you like for CLIENT and EMPLOYER (the examples below use `worksheet-client` and `worksheet-employer`), then record those exact names in the **Credentials** section of `rules/config.md` so the commands can find them.
 
 ```sh
 security add-generic-password -s "worksheet-client"    -a username -w "YOUR_USERNAME" -U
@@ -131,7 +115,7 @@ security add-generic-password -s "worksheet-ns"        -a password -w "YOUR_PASS
 ### 3. Configure context
 
 ```sh
-cp rules/context.md.example rules/context.md
+cp rules/config.md.example rules/config.md
 ```
 
 Fill in your name, email, company contacts, NS card ID, project codes, and location rules table.

@@ -25,7 +25,7 @@ Automate routine software engineering workflows
   <tbody>
     <tr>
       <td>⏱️ <a href="./hour-registration/README.md"><b>hour-registration</b></a></td>
-      <td>Automates the complete billing cycle for consultant invoicing — calendar → timesheets → work slips → email.</td>
+      <td>Automates the complete billing cycle for consultant invoicing <br> calendar → timesheets → work slips → email</td>
       <td align="center">🟢 Live</td>
     </tr>
   </tbody>
@@ -48,19 +48,6 @@ In Claude Code, run:
 ```sh
 /plugin install hour-registration@stefania
 ```
-
-### From a local clone
-
-```sh
-git clone https://github.com/sunnyStefi/stefania-marketplace ~/stefania-marketplace
-```
-
-Then in Claude Code:
-
-```sh
-/plugin install ~/stefania-marketplace/hour-registration
-```
-
 ---
 
 <div align="center">

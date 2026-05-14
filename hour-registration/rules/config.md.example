@@ -1,0 +1,94 @@
+---
+paths:
+  - "commands/**/*.md"
+---
+
+# Worksheet config
+
+⚠️ IMPORTANT! Copy this file to `rules/config.md` (gitignored) and fill in your values. This file is the single source of truth for both personal configuration and location-to-system mappings — edit only this file when changing personal details, project codes, or client sites.
+
+## Identity
+
+| Field | Value |
+|---|---|
+| Name | Your Full Name |
+| Email | your@email.com |
+
+## Companies
+
+Throughout this plugin, **CLIENT** refers to the client timesheet system and **EMPLOYER** refers to the employer's administration tool. The names below are the canonical values used everywhere these placeholders appear.
+
+| Name | Value |
+|---|---|
+| CLIENT | Your client's timesheet system |
+| EMPLOYER | Your employer's administration tool |
+
+## Contacts
+
+| Name | Role | Email |
+|---|---|---|
+| Admin contact name | EMPLOYER administration | admin@company.com |
+
+## Project codes
+
+| Project | Code |
+|---|---|
+| Default (CLIENT on-site / remote) | Client-YourName |
+| Meetup | Meetup |
+| Leave / Sick | Verlof / Leave |
+| Vacation | Vakantie / Vacation |
+| National Holiday | Feestdag / National Holiday |
+
+## NS card
+
+| Field | Value |
+|---|---|
+| Card ID | xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx |
+
+## Credentials (macOS Keychain)
+
+| System | Keychain service |
+|---|---|
+| CLIENT | `worksheet-client` |
+| EMPLOYER | `worksheet-employer` |
+| NS | `worksheet-ns` |
+
+## Location rules
+
+Canonical mapping from a workday's `location` to how it should be entered in each system.
+
+### How each step uses this table
+
+- **Step 1 — calendar** picks a `location` for each weekday based on the **Calendar match** column. If no event matches, fall back to the default location (first row).
+- **Step 2 — CLIENT** enters the **CLIENT hours** value for that day.
+- **Step 3 — EMPLOYER** enters the **EMPLOYER project**, **EMPLOYER hours**, and toggles **Home work allowance** as listed.
+
+### Location table
+
+| Location          | Calendar match       | CLIENT hours | EMPLOYER project      | EMPLOYER hours | Home work allowance |
+|-------------------|----------------------|--------------|-----------------------|----------------|---------------------|
+| `Client`          | _no event scheduled_ | 8            | `Client-YourName`     | 8              | checked             |
+| `City A`          | `City A`             | 8            | `Client-YourName`     | 8              | unchecked           |
+| `City B`          | `City B`             | 8            | `Client-YourName`     | 8              | unchecked           |
+| `City C`          | `City C-Meetup`      | 0            | `Meetup`              | 8              | n/a                 |
+| `Leave`           | `Sick`               | 0            | `Verlof / Leave`      | 8              | n/a                 |
+| `Vacation`        | `Vacation`           | 0            | `Vakantie / Vacation` | 8              | n/a                 |
+| `National Holiday`| National Holiday     | 0            | `Feestdag / National Holiday` | 8      | n/a                 |
+
+### Notes
+
+- The default project (`Client-YourName`) is entered on the default row in the EMPLOYER tool; other projects are added with the **+** button.
+- Home work allowance only applies to the default project row; the column is `n/a` for all others.
+- A `location` value not present in this table is an error — Step 1 must produce one of the keys above, and Steps 2 and 3 must refuse to proceed on unknown values.
+
+## Error handling
+
+Default rules that apply to all commands.
+
+| Condition | Action |
+|---|---|
+| Transient failure (network timeout, page crash, download timeout) | Wait 30 seconds and retry. Max **2 retries** before reporting failure. |
+| Login failure | Stop and report — do not retry credentials automatically. |
+| No data found (no timesheets, no journeys, etc.) | Stop and report — do not create empty files or directories. |
+| Unknown location value | Stop immediately and report — do not enter partial data. |
+| Data integrity check failure (e.g. week mismatch in `worked_hours.json`) | Stop immediately and report — do not submit. |

@@ -4,11 +4,11 @@ description: "List this week's worked hours from Google Calendar and submit them
 model: sonnet
 ---
 
-Run both weekly steps in sequence without pausing. CLIENT and EMPLOYER are defined in `rules/config.md` (Companies section).
+Run both weekly steps in sequence without pausing
 
 ## Week definition
 
-"Current week" = the ISO 8601 week (Mon–Sun) that contains **today's date**, in the **Europe/Amsterdam** timezone. If today is Saturday or Sunday, use the week that just ended (the most recently completed Mon–Fri span). If the job fires on a Saturday or Sunday (e.g. machine was asleep on Friday), the current week is still the week that just ended — do not skip it.
+"Current week" = the ISO 8601 week (Mon–Sun) that contains **today's date**, in the **Europe/Amsterdam** timezone. If today is Saturday or Sunday, use the week that just ended (the most recently completed Mon–Fri span).
 
 ## Step 1 — List hours from calendar
 
@@ -37,7 +37,7 @@ On error, do not write a partial or empty JSON file.
 
 ## Step 2 — Submit hours
 
-Use the Playwright MCP server. Keychain service names come from the Credentials section of `rules/context.md`.
+Use the Playwright MCP server. Keychain service names come from the Credentials section of `rules/config.md`.
 
 ### Pre-check (once)
 
@@ -45,12 +45,12 @@ Read `hour-registration/data/worked_hours.json`. Compute the current ISO week (e
 
 ### Submit (run for each system)
 
-Run the steps below **twice** — once per system row:
+Run the steps below **twice** — once per system column:
 
 | Variable | CLIENT | EMPLOYER |
 |---|---|---|
 | `{url}` | `https://www.eu.fieldglass.cloud.sap/time_sheet_list.do?cf=1` | `https://app-administration-app.azurewebsites.net/time-tracking` |
-| `{keychain}` | CLIENT keychain service from `rules/context.md` | EMPLOYER keychain service from `rules/context.md` |
+| `{keychain}` | CLIENT keychain service from `rules/config.md` | EMPLOYER keychain service from `rules/config.md` |
 | `{already-submitted}` | status is not `Draft` / `Not submitted` | any non-zero hours already entered, or week is locked/submitted |
 | `{columns}` | CLIENT hours column | EMPLOYER project, hours, and Thuiswerken Vergoeding columns |
 
