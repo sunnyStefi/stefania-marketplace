@@ -12,7 +12,6 @@
 
 </div>
 
----
 
 ## 🙋🏼‍♂️ Personal Information and Location rules
 
