@@ -81,9 +81,44 @@ launchctl unload ~/Library/LaunchAgents/com.claude.monthly-worksheet.plist   # p
 
 ---
 
-## 📍 Location rules
+## 📍 Configuration — `rules/config.md`
 
-All location-to-system mappings live in `rules/config.md`, alongside the rest of the personal configuration. Edit only that file when adding a new client site or changing a project code — it is the **single source of truth**.
+All personal configuration lives in `rules/config.md` (gitignored). It is the single source of truth — edit only that file when changing personal details, project codes, or client sites. Copy `rules/config.md.example` to get started.
+
+The file contains the following sections:
+
+**Identity** — Your name and work email, used to sign the monthly administration email.
+
+**Companies** — The display names for the two systems this plugin automates. `CLIENT` is your client's timesheet portal (where you log billable hours); `EMPLOYER` is your employer's internal time-tracking tool (where you register the same hours plus expense allowances).
+
+**Contacts** — The person at your employer who receives the monthly email with work slips and travel costs.
+
+**Project codes** — The codes used when entering hours in CLIENT and EMPLOYER. The default code covers all regular working days; add a row for each special project type your employer requires.
+
+**Calendar** — The name of the Google Calendar where your work events are logged. The weekly command reads this to determine hours and location for each day.
+
+**NS card** — Your NS public transport card ID, used to fetch your monthly travel history from ns.nl for the administration email.
+
+**Credentials** — The macOS Keychain service names where login credentials are stored (each with a `username` and `password` key). See step 2 of setup below.
+
+**Location rules** — Maps each workday to the correct hours and project codes in CLIENT and EMPLOYER. See [Location rules](#️-location-rules) below.
+
+---
+
+## 🗺️ Location rules
+
+Each workday gets a **location** label that determines what to enter in CLIENT and EMPLOYER for that day. The weekly command reads your calendar events to pick the right location, then uses the location table in `rules/config.md` to translate it into hours and project codes.
+
+The table has five columns:
+
+- **Location** — the internal label used in `worked_hours.json` and referenced by the submit step.
+- **Calendar match** — the keyword the weekly command looks for in that day's calendar events. Days with no matching event fall back to the first row (the default).
+- **CLIENT hours** — how many hours to enter in the client portal. Non-billable days (leave, vacation, holidays, meetups) are 0 because those days are not submitted to the client.
+- **EMPLOYER project** — the project code to select in the employer tool.
+- **EMPLOYER hours** — how many hours to enter in the employer tool. Always 8 — the employer always registers a full day regardless of billability.
+- **Home work allowance** — whether to tick the allowance checkbox in the employer tool. Applies only to the default (remote/on-site) row; `n/a` for all others.
+
+To add a new location (e.g. a new client site or office), add a row to the table and a matching calendar event keyword in the **Calendar match** column. The commands will refuse to proceed if they encounter a location not listed in the table.
 
 ---
 
@@ -110,7 +145,7 @@ security add-generic-password -s "worksheet-ns"        -a password -w "YOUR_PASS
 
 > The first time a Keychain entry is read, macOS will prompt — choose **Always Allow**. To update, re-run with `-U`. To inspect: open **Keychain Access.app** and search `worksheet-`.
 
-### 3. Configure context
+### 3. Configure
 
 ```sh
 cp rules/config.md.example rules/config.md
