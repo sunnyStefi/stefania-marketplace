@@ -37,7 +37,7 @@
 | Step | Command | What it does |
 |:-:|---|---|
 | 1 | `list-weekly-hours-calendar` | Reads Work calendar → `hour-registration/data/worked_hours.json` |
-| 2 | `add-weekly-hours` | Submits hours to Eneco Fieldglass and Sourcelabs Administratie |
+| 2 | `add-weekly-hours` | Submits hours to CLIENT and EMPLOYER (see `rules/context.md`) |
 
 > **Automated:** runs every Friday at **10:00** via macOS `launchd` (see [Scheduling](#-scheduling)).
 
@@ -53,8 +53,8 @@ Step 1 runs without pausing; step 2 asks for confirmation before sending and cle
 
 | Step | Command | What it does |
 |:-:|---|---|
-| 1 | `download-monthly-documents` | Downloads previous month's timesheets (Eneco Fieldglass) and NS travel history |
-| 2 | `send-email-administration` | Emails work slips + travel costs to Sourcelabs admin, then deletes the download folder |
+| 1 | `download-monthly-documents` | Downloads previous month's timesheets (CLIENT) and NS travel history |
+| 2 | `send-email-administration` | Emails work slips + travel costs to EMPLOYER admin, then deletes the download folder |
 
 > Download paths use `MM-YY` format (e.g. April 2026 → `04-26`). Orchestrators always target the **previous** month (Europe/Amsterdam timezone).
 
@@ -123,13 +123,15 @@ All location-to-system mappings live in `rules/context.md`, alongside the rest o
 
 ### 2. Configure credentials
 
+Pick any keychain service names you like for CLIENT and EMPLOYER (the examples below use `worksheet-client` and `worksheet-employer`), then record those exact names in the **Credentials** section of `rules/context.md` so the commands can find them.
+
 ```sh
-security add-generic-password -s "worksheet-fieldglass"  -a username -w "YOUR_USERNAME" -U
-security add-generic-password -s "worksheet-fieldglass"  -a password -w "YOUR_PASSWORD" -U
-security add-generic-password -s "worksheet-sourcelabs"  -a username -w "YOUR_EMAIL"    -U
-security add-generic-password -s "worksheet-sourcelabs"  -a password -w "YOUR_PASSWORD" -U
-security add-generic-password -s "worksheet-ns"          -a username -w "YOUR_EMAIL"    -U
-security add-generic-password -s "worksheet-ns"          -a password -w "YOUR_PASSWORD" -U
+security add-generic-password -s "worksheet-client"    -a username -w "YOUR_USERNAME" -U
+security add-generic-password -s "worksheet-client"    -a password -w "YOUR_PASSWORD" -U
+security add-generic-password -s "worksheet-employer"  -a username -w "YOUR_EMAIL"    -U
+security add-generic-password -s "worksheet-employer"  -a password -w "YOUR_PASSWORD" -U
+security add-generic-password -s "worksheet-ns"        -a username -w "YOUR_EMAIL"    -U
+security add-generic-password -s "worksheet-ns"        -a password -w "YOUR_PASSWORD" -U
 ```
 
 > The first time a Keychain entry is read, macOS will prompt — choose **Always Allow**. To update, re-run with `-U`. To inspect: open **Keychain Access.app** and search `worksheet-`.
