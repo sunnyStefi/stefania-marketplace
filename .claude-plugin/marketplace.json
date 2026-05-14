@@ -7,7 +7,7 @@
     {
       "name": "hour-registration",
       "source": "./hour-registration",
-      "description": "Automates the complete billing cycle: weekly timesheet submission to CLIENT and EMPLOYER, monthly download of work slips and NS travel history, and emailing everything to administration."
+      "description": "Automates the complete billing cycle: weekly timesheet submission to CLIENT and EMPLOYER, monthly download of work slips and NS travel history, and emailing everything to ADMINISTRATION."
     }
   ]
 }

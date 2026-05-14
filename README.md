@@ -2,7 +2,7 @@
 
 # 🛒 Stefania's Claude Code Marketplace
 
-Automate the boring parts of software engineering.
+Automate routine software engineering workflows
 
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-Plugin%20Marketplace-D97757?style=for-the-badge&logo=anthropic&logoColor=white)](https://claude.ai/code)
 [![Status](https://img.shields.io/badge/status-active-success?style=for-the-badge)](#)
